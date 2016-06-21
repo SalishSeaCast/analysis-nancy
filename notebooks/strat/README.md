@@ -6,7 +6,7 @@ The links below are to static renderings of the notebooks via
 Descriptions below the links are from the first cell of the notebooks
 (if that cell contains Markdown or raw text).
 
-* ##[DWR_kw.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/DWR_kw.ipynb)  
+* ##[DWR_kw.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/DWR_kw.ipynb)  
     
     This notebook looks at the vertical eddy viscosity/diffusivity during a deep water renewal event in late August 2003.  
       
@@ -16,7 +16,7 @@ Descriptions below the links are from the first cell of the notebooks
       
     dwr_kw compared to dwr_isoneutral  
 
-* ##[DWR_corrected_april.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/DWR_corrected_april.ipynb)  
+* ##[DWR_corrected_april.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/DWR_corrected_april.ipynb)  
     
     This notebook looks at the vertical eddy viscosity/diffusivity during a deep water renewal event in late August 2003.  
       
@@ -28,13 +28,13 @@ Descriptions below the links are from the first cell of the notebooks
       
     Simulations in late april. Restarted for May to July.  
 
-* ##[Winds and Fresh Spurts at Race Rocks.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/Winds and Fresh Spurts at Race Rocks.ipynb)  
+* ##[Winds and Fresh Spurts at Race Rocks.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/Winds and Fresh Spurts at Race Rocks.ipynb)  
     
     How do the spikes in freshness at Race Rocks relate to the local winds and spring/neap tides?  
       
     How is the salinity in Malaspina Strait connected to all of this?  
 
-* ##[DWR_new_bcs.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/DWR_new_bcs.ipynb)  
+* ##[DWR_new_bcs.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/DWR_new_bcs.ipynb)  
     
     This notebook looks at the vertical eddy viscosity/diffusivity during a deep water renewal event in late August 2003.  
       
@@ -44,14 +44,14 @@ Descriptions below the links are from the first cell of the notebooks
       
     dwr_new_bcs has salnity below 150m incrased by 0.3311  
 
-* ##[DWR_notsmooth_kappa10_winds.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/DWR_notsmooth_kappa10_winds.ipynb)  
+* ##[DWR_notsmooth_kappa10_winds.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/DWR_notsmooth_kappa10_winds.ipynb)  
     
     This notebook looks at the vertical eddy viscosity/diffusivity during a deep water renewal event in late August 2003.  
       
     Compares diff=1e-6 and visc=1e-5 with winds to base case with winds.   
 
 
-* ##[Eddy values at VENUS nodes.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/Eddy values at VENUS nodes.ipynb)  
+* ##[Eddy values at VENUS nodes.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/Eddy values at VENUS nodes.ipynb)  
     
     This notebook will compare the vertical eddy diffusivity and viscosity at the the VENUS nodes. Two simulations are compared -   
       
@@ -61,14 +61,14 @@ Descriptions below the links are from the first cell of the notebooks
       
     Both used winds  
 
-* ##[DWR_diff1e-6_visc1e-5_winds.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/DWR_diff1e-6_visc1e-5_winds.ipynb)  
+* ##[DWR_diff1e-6_visc1e-5_winds.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/DWR_diff1e-6_visc1e-5_winds.ipynb)  
     
     This notebook looks at the vertical eddy viscosity/diffusivity during a deep water renewal event in late August 2003.  
       
     Compares diff=1e-6 and visc=1e-5 with winds to diff=1e-6, visc=1e-5 with no winds.   
 
 
-* ##[DWR_new_bcs_surface.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/DWR_new_bcs_surface.ipynb)  
+* ##[DWR_new_bcs_surface.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/DWR_new_bcs_surface.ipynb)  
     
     This notebook looks at the vertical eddy viscosity/diffusivity during a deep water renewal event in late August 2003.  
       
@@ -80,7 +80,7 @@ Descriptions below the links are from the first cell of the notebooks
       
     dwr_new_bcs_surface has salinity below 150m incrased by 0.3311 and salinity above 50m increased by 0.3311  
 
-* ##[DWR_enst.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/DWR_enst.ipynb)  
+* ##[DWR_enst.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/DWR_enst.ipynb)  
     
     This notebook looks stratification along thalweg in late April.  
       
@@ -92,7 +92,7 @@ Descriptions below the links are from the first cell of the notebooks
       
     dwr_enstr_eng has original choice - energy enstrophy conserving.  
 
-* ##[DWR_bbl.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/DWR_bbl.ipynb)  
+* ##[DWR_bbl.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/DWR_bbl.ipynb)  
     
     This notebook looks at the vertical eddy viscosity/diffusivity during a deep water renewal event in late August 2003.  
       
@@ -106,28 +106,29 @@ Descriptions below the links are from the first cell of the notebooks
       
     Almost no differences between the base case and dwr_bbl_adv2.  
 
-* ##[Mechanisms for mixing.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/Mechanisms for mixing.ipynb)  
+* ##[Mechanisms for mixing.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/Mechanisms for mixing.ipynb)  
     
     What are the mechanisms that cause mixing the the sill region? Other literature suggests  
     * Hydraulic jumps (Griffins and Leblond and their Froude number discussion)  
     * Internal tides (one of Rich's papers saw internal tides in Haro Strait. I don't remember if he said it causes mixing but there is potential).  
+    * Shear currents  
     * Separation induced mixing (a Rich and Farmer paper)  
     * Eddies in Boundary Pass (one of Ann Gargett's papers)  
       
     Can we find evidence of these features in the model?  
 
-* ##[Stratification and tides.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/Stratification and tides.ipynb)  
+* ##[Stratification and tides.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/Stratification and tides.ipynb)  
     
     Check on a 40 day run with no stratification. This means no OBC temp/salinity, no weather and no rivers. Temp/salinity set to ocean values through whole domain.  
 
-* ##[DWR_kappa10_smooth.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/DWR_kappa10_smooth.ipynb)  
+* ##[DWR_kappa10_smooth.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/DWR_kappa10_smooth.ipynb)  
     
     This notebook looks at the vertical eddy viscosity/diffusivity during a deep water renewal event in late August 2003.  
       
     Compares kappa=10, smooth to kappa=20.5, not smooth  
 
 
-* ##[DWR_diff1e-6_visc1e-5.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/DWR_diff1e-6_visc1e-5.ipynb)  
+* ##[DWR_diff1e-6_visc1e-5.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/DWR_diff1e-6_visc1e-5.ipynb)  
     
     This notebook looks at the vertical eddy viscosity/diffusivity during a deep water renewal event in late August 2003.  
       
@@ -139,21 +140,21 @@ Descriptions below the links are from the first cell of the notebooks
       
     2D model had no wind.  
 
-* ##[Deep Water Renewal - East of Central.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/Deep Water Renewal - East of Central.ipynb)  
+* ##[Deep Water Renewal - East of Central.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/Deep Water Renewal - East of Central.ipynb)  
     
-* ##[Rich's IOS data.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/Rich's IOS data.ipynb)  
+* ##[Rich's IOS data.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/Rich's IOS data.ipynb)  
     
     Notebook to determine the temporal and spatial coverage of IOS data that Rich has stored.  
 
 
-* ##[DWR_diff1e-6.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/DWR_diff1e-6.ipynb)  
+* ##[DWR_diff1e-6.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/DWR_diff1e-6.ipynb)  
     
     This notebook looks at the vertical eddy viscosity/diffusivity during a deep water renewal event in late August 2003.  
       
     Compares diff=1e-5 to 1e-6  
 
 
-* ##[DWR_holls_36.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/DWR_holls_36.ipynb)  
+* ##[DWR_holls_36.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/DWR_holls_36.ipynb)  
     
     This notebook looks at the vertical eddy viscosity/diffusivity during a deep water renewal event in late August 2003.  
       
@@ -162,14 +163,14 @@ Descriptions below the links are from the first cell of the notebooks
     Both have defualt 3.6 settings with winds, but the hol case has the hollingsworth corrections.  
 
 
-* ##[DWR_isoneutral.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/DWR_isoneutral.ipynb)  
+* ##[DWR_isoneutral.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/DWR_isoneutral.ipynb)  
     
     This notebook looks at the vertical eddy viscosity/diffusivity during a deep water renewal event in late August 2003.  
       
     Compares isoneutral mixing to default case  
 
 
-* ##[DWR_corrected.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/DWR_corrected.ipynb)  
+* ##[DWR_corrected.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/DWR_corrected.ipynb)  
     
     This notebook looks at the vertical eddy viscosity/diffusivity during a deep water renewal event in late August 2003.  
       
@@ -179,7 +180,7 @@ Descriptions below the links are from the first cell of the notebooks
       
     dwr_corrected applies a correction to the origial bcs.  
 
-* ##[DWR_kappa10.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/DWR_kappa10.ipynb)  
+* ##[DWR_kappa10.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/DWR_kappa10.ipynb)  
     
     This notebook looks at the vertical eddy viscosity/diffusivity during a deep water renewal event in late August 2003.  
       

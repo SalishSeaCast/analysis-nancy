@@ -6,15 +6,15 @@ The links below are to static renderings of the notebooks via
 Descriptions below the links are from the first cell of the notebooks
 (if that cell contains Markdown or raw text).
 
-* ##[BBL parametrization.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/BBL parametrization.ipynb)  
+* ##[BBL parametrization.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/BBL parametrization.ipynb)  
     
     This notebook will analyze the salinity field along the thalweg when using the bottom bounday layer scheme for gravity driven flows down a slope with the z-coordinate.   
 
-* ##[compareViscosity.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/compareViscosity.ipynb)  
+* ##[compareViscosity.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/compareViscosity.ipynb)  
     
     A script to compare runs with different viscosities.  
 
-* ##[GEM Time Series.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/GEM Time Series.ipynb)  
+* ##[GEM Time Series.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/GEM Time Series.ipynb)  
     
     This notebook will examine the GEM model wind direction and speed by compareing a time series with observations. I will examine   
     1. Sandheads - http://climate.weather.gc.ca/climateData/hourlydata_e.html?timeframe=1&Prov=BC%20%20&StationID=6831&hlyRange=1994-02-01|2014-09-23&Year=2014&Month=9&Day=21  
@@ -25,11 +25,11 @@ Descriptions below the links are from the first cell of the notebooks
     6. Esquimalt - http://climate.weather.gc.ca/climateData/hourlydata_e.html?timeframe=1&Prov=&StationID=52&hlyRange=1994-02-01|2014-10-01&Year=2014&Month=10&Day=1  
     5. NOAA Buoy - http://www.ndbc.noaa.gov/station_page.php?station=46041  
 
-* ##[weather_comparisons.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/weather_comparisons.ipynb)  
+* ##[weather_comparisons.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/weather_comparisons.ipynb)  
     
     An example of how I would like to use MFDataset for reading in atmopsheric model.   
 
-* ##[New GEM Time Series Nov18--.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/New GEM Time Series Nov18--.ipynb)  
+* ##[New GEM Time Series Nov18--.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/New GEM Time Series Nov18--.ipynb)  
     
     This notebook will examine the GEM model wind direction and speed by compareing a time series with observations. I will examine   
     1. Sandheads - http://climate.weather.gc.ca/climateData/hourlydata_e.html?timeframe=1&Prov=BC%20%20&StationID=6831&hlyRange=1994-02-01|2014-09-23&Year=2014&Month=9&Day=21  
@@ -40,7 +40,7 @@ Descriptions below the links are from the first cell of the notebooks
     6. Esquimalt - http://climate.weather.gc.ca/climateData/hourlydata_e.html?timeframe=1&Prov=&StationID=52&hlyRange=1994-02-01|2014-10-01&Year=2014&Month=10&Day=1  
     5. NOAA Buoy - http://www.ndbc.noaa.gov/station_page.php?station=46041  
 
-* ##[New GEM Time Series - Modified lat lon grid starting Aug 6.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/New GEM Time Series - Modified lat lon grid starting Aug 6.ipynb)  
+* ##[New GEM Time Series - Modified lat lon grid starting Aug 6.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/New GEM Time Series - Modified lat lon grid starting Aug 6.ipynb)  
     
     This notebook will examine the GEM model wind direction and speed by compareing a time series with observations. I will examine   
     1. Sandheads - http://climate.weather.gc.ca/climateData/hourlydata_e.html?timeframe=1&Prov=BC%20%20&StationID=6831&hlyRange=1994-02-01|2014-09-23&Year=2014&Month=9&Day=21  
@@ -51,21 +51,21 @@ Descriptions below the links are from the first cell of the notebooks
     6. Esquimalt - http://climate.weather.gc.ca/climateData/hourlydata_e.html?timeframe=1&Prov=&StationID=52&hlyRange=1994-02-01|2014-10-01&Year=2014&Month=10&Day=1  
     5. NOAA Buoy - http://www.ndbc.noaa.gov/station_page.php?station=46041  
 
-* ##[Plot for Eath Matters.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/Plot for Eath Matters.ipynb)  
+* ##[Plot for Eath Matters.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/Plot for Eath Matters.ipynb)  
     
     Plot of surface salinity with quivers for Eart Matters.  
 
-* ##[Developing and testing depth average.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/Developing and testing depth average.ipynb)  
+* ##[Developing and testing depth average.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/Developing and testing depth average.ipynb)  
     
     This notebooks is used to develope and test a function that will calulate the depth average of a model variable.  
 
-* ##[Masking with tmask.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/Masking with tmask.ipynb)  
+* ##[Masking with tmask.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/Masking with tmask.ipynb)  
     
     This notebooks shows how to use the tmask from mesh_mask.nc file to mask variables.  
       
     It also compared the timing of using tmask vs searching for zeros.  
 
-* ##[Rivers2m.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/Rivers2m.ipynb)  
+* ##[Rivers2m.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/Rivers2m.ipynb)  
     
     Quick comparison between a week long run in Dec 11-17 with rivers at different depths  
       
@@ -74,22 +74,22 @@ Descriptions below the links are from the first cell of the notebooks
       
     Both simulations began with a T/S profile from the spin ups.   
 
-* ##[crashAnalysis.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/crashAnalysis.ipynb)  
+* ##[crashAnalysis.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/crashAnalysis.ipynb)  
     
     A code to look at the data from the crashed run. What is going wrong!  
     Looks at currents, bathymetry, and sea surface height around the crashed time step.   
 
-* ##[Sea Level Pressure.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/Sea Level Pressure.ipynb)  
+* ##[Sea Level Pressure.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/Sea Level Pressure.ipynb)  
     
     Given the altitude of a CGRF grid cell, calculate the pressure at sea level.  
 
-* ##[nu200_nu50.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/nu200_nu50.ipynb)  
+* ##[nu200_nu50.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nu200_nu50.ipynb)  
     
     This notebook runs a comparison between the $\nu=200$ and $\nu=50$ simulations by Doug.   
       
     The focus is on currents and tracers.   
 
-* ##[New GEM Time Series May 2015.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/New GEM Time Series May 2015.ipynb)  
+* ##[New GEM Time Series May 2015.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/New GEM Time Series May 2015.ipynb)  
     
     This notebook will examine the GEM model wind direction and speed by compareing a time series with observations. I will examine   
     1. Sandheads - http://climate.weather.gc.ca/climateData/hourlydata_e.html?timeframe=1&Prov=BC%20%20&StationID=6831&hlyRange=1994-02-01|2014-09-23&Year=2014&Month=9&Day=21  
@@ -100,36 +100,36 @@ Descriptions below the links are from the first cell of the notebooks
     6. Esquimalt - http://climate.weather.gc.ca/climateData/hourlydata_e.html?timeframe=1&Prov=&StationID=52&hlyRange=1994-02-01|2014-10-01&Year=2014&Month=10&Day=1  
     5. NOAA Buoy - http://www.ndbc.noaa.gov/station_page.php?station=46041  
 
-* ##[NEMO depths vs bathymetry file.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/NEMO depths vs bathymetry file.ipynb)  
+* ##[NEMO depths vs bathymetry file.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/NEMO depths vs bathymetry file.ipynb)  
     
     This notebook compares the NEMO bottom w-depth to the depth specified in the bathymetry file. We speculate that NEMO somehow shallows out the bathymetry.  
 
-* ##[Playing with coastline data.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/Playing with coastline data.ipynb)  
+* ##[Playing with coastline data.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/Playing with coastline data.ipynb)  
     
     Figuring out how to fill the land colour with Rich's coastline data.  
 
-* ##[Seymour Narrows.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/Seymour Narrows.ipynb)  
+* ##[Seymour Narrows.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/Seymour Narrows.ipynb)  
     
-* ##[interpolation.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/interpolation.ipynb)  
+* ##[interpolation.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/interpolation.ipynb)  
     
     Just a quick notebook to play around with interpolating CGRF data into our grid.  
 
-* ##[northAnalysis.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/northAnalysis.ipynb)  
+* ##[northAnalysis.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/northAnalysis.ipynb)  
     
     An analysis of the open boundary conditions at the north.   
 
-* ##[mergeCompare.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/mergeCompare.ipynb)  
+* ##[mergeCompare.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/mergeCompare.ipynb)  
     
     Comparing merge-tests on Salish and Japser. A week long run to see how the differences evolve.   
 
-* ##[Eddy viscosity.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/Eddy viscosity.ipynb)  
+* ##[Eddy viscosity.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/Eddy viscosity.ipynb)  
     
     This notebook looks at the vertical eddy viscosity/diffusivity during a deep water renewal event in late August 2003.  
       
     This is a 10 day simulation with daily averaged output.  
 
 
-* ##[Boundary Pass bathymetry.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/Boundary Pass bathymetry.ipynb)  
+* ##[Boundary Pass bathymetry.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/Boundary Pass bathymetry.ipynb)  
     
     I've noticed in some places that the model bathymetry in Boundary Pass doesn't seem to match with reality.   
       
@@ -139,7 +139,7 @@ Descriptions below the links are from the first cell of the notebooks
       
     Is this a consistent error or is it just a discrepancy with the closest model grid point? I will investigate by looking at the bathymetry near the observations points as well.  
 
-* ##[MakingSusansGrid.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/MakingSusansGrid.ipynb)  
+* ##[MakingSusansGrid.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/MakingSusansGrid.ipynb)  
     
     Translating Susan's grid into NEMO parameters  
 

@@ -6,50 +6,50 @@ The links below are to static renderings of the notebooks via
 Descriptions below the links are from the first cell of the notebooks
 (if that cell contains Markdown or raw text).
 
-* ##[Baroclinic tide.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/currents/Baroclinic tide.ipynb)  
+* ##[Baroclinic tide.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/Baroclinic tide.ipynb)  
     
     Analyzing the baroclinic tide at VENUS nodes  
 
-* ##[Tidal currents .ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/currents/Tidal currents .ipynb)  
+* ##[Tidal currents .ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/Tidal currents .ipynb)  
     
     An example of analyzing tidal currents.  
       
 
 
-* ##[NEMO 3.6 tidal currents.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/currents/NEMO 3.6 tidal currents.ipynb)  
+* ##[NEMO 3.6 tidal currents.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/NEMO 3.6 tidal currents.ipynb)  
     
     Compare NEMO 3.6 tidal curretns with NEMO 3.4  
 
-* ##[Explore recombining CODAR files.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/currents/Explore recombining CODAR files.ipynb)  
+* ##[Explore recombining CODAR files.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/Explore recombining CODAR files.ipynb)  
     
     Attempt at concatenating netcdf subdomain files.  
 
-* ##[Idealized wave problem.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/currents/Idealized wave problem.ipynb)  
+* ##[Idealized wave problem.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/Idealized wave problem.ipynb)  
     
     Notebook to solve idealized wave problem. Barotropic current interacting with a step.  
 
-* ##[Visualizing a wave.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/currents/Visualizing a wave.ipynb)  
+* ##[Visualizing a wave.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/Visualizing a wave.ipynb)  
     
     Notebook to help visualize a wave  
 
-* ##[Baroclinic tides domain.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/currents/Baroclinic tides domain.ipynb)  
+* ##[Baroclinic tides domain.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/Baroclinic tides domain.ipynb)  
     
-* ##[North SoG and BP Internal wave beams.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/currents/North SoG and BP Internal wave beams.ipynb)  
+* ##[North SoG and BP Internal wave beams.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/North SoG and BP Internal wave beams.ipynb)  
     
     Notebook to explore the possibility of internal wave beams generate at the slopes of the fraser river.  
 
-* ##[bathy on slopes and barotropic tides pattern.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/currents/bathy on slopes and barotropic tides pattern.ipynb)  
+* ##[bathy on slopes and barotropic tides pattern.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/bathy on slopes and barotropic tides pattern.ipynb)  
     
-* ##[Baroclinic Tides - CODAR Region.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/currents/Baroclinic Tides - CODAR Region.ipynb)  
+* ##[Baroclinic Tides - CODAR Region.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/Baroclinic Tides - CODAR Region.ipynb)  
     
     This notebook will be used to analyze the baroclinic tides over the CODAR region.  
 
 
-* ##[Internal wave beams.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/currents/Internal wave beams.ipynb)  
+* ##[Internal wave beams.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/Internal wave beams.ipynb)  
     
     Notebook to explore the possibility of internal wave beams generate at the slopes of the fraser river.  
 
-* ##[Baroclinic Tides - CODAR region - phase and inclination-masked.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/currents/Baroclinic Tides - CODAR region - phase and inclination-masked.ipynb)  
+* ##[Baroclinic Tides - CODAR region - phase and inclination-masked.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/Baroclinic Tides - CODAR region - phase and inclination-masked.ipynb)  
     
     Another look at CODAR baroclinc tides, but focusing on the inclination and phase.  
       
@@ -59,21 +59,21 @@ Descriptions below the links are from the first cell of the notebooks
       
     Both barotropic and baroclinic were calcualted using a now cast time series Nov 26, 2014- April 26, 2015  
 
-* ##[Internal waves - theory.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/currents/Internal waves - theory.ipynb)  
+* ##[Internal waves - theory.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/Internal waves - theory.ipynb)  
     
     This notebook will look at some internal wave speed theory. I will try to pick out things like the phase speed of the waves in the surface layer and slope of internal wave beams...  
 
-* ##[Internal wave beams and boundary current.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/currents/Internal wave beams and boundary current.ipynb)  
+* ##[Internal wave beams and boundary current.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/Internal wave beams and boundary current.ipynb)  
     
     Notebook to explore the possibility of internal wave beams near the Fraser River banks and Rich's boundary current.  
 
-* ##[Generation of internal waves at Boundary Pass.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/currents/Generation of internal waves at Boundary Pass.ipynb)  
+* ##[Generation of internal waves at Boundary Pass.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/Generation of internal waves at Boundary Pass.ipynb)  
     
     This notebook investigates the internal wave generation mechanism proposed by Gargett 1977 at Boundary Pass. Do we observe these features in the model as well?  
       
 
 
-* ##[Baroclinic Tides - CODAR region - phase and inclination.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/currents/Baroclinic Tides - CODAR region - phase and inclination.ipynb)  
+* ##[Baroclinic Tides - CODAR region - phase and inclination.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/Baroclinic Tides - CODAR region - phase and inclination.ipynb)  
     
     Another look at CODAR baroclinc tides, but focusing on the inclination and phase.  
       
@@ -83,11 +83,13 @@ Descriptions below the links are from the first cell of the notebooks
       
     Both barotropic and baroclinic were calcualted using a now cast time series Nov 26, 2014- April 26, 2015  
 
-* ##[M2 Baroclinic Kinetic Energy.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/currents/M2 Baroclinic Kinetic Energy.ipynb)  
+* ##[Isopycnal displacement.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/Isopycnal displacement.ipynb)  
+    
+* ##[M2 Baroclinic Kinetic Energy.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/M2 Baroclinic Kinetic Energy.ipynb)  
     
     Looking at the M2 baroclinic kinetic energy which I define as 0.5*(major^2 +minor^2)  
 
-* ##[Bathymetry modifications and tides.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/currents/Bathymetry modifications and tides.ipynb)  
+* ##[Bathymetry modifications and tides.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/Bathymetry modifications and tides.ipynb)  
     
     A notebook to examine how modifications to the bathymetry have affected the baroclinic tides.  
 
