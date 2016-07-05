@@ -18,6 +18,10 @@ Descriptions below the links are from the first cell of the notebooks
     
     Looking at high-frequency oscillation in nowcast green ssh at Point Atkinson 15 minute files.  
 
+* ##[Density at ONC nodes in nowcast green.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/Density at ONC nodes in nowcast green.ipynb)  
+    
+    The temperature in the bottom of the Salish Sea for nowcast-green is much too cold. Can this impact the density and in turn the deep water renewal?  
+
 * ##[Januaray ssh - nowcast and nowcast-green.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/Januaray ssh - nowcast and nowcast-green.ipynb)  
     
     I donwloaded recent water level observations from this website.  
