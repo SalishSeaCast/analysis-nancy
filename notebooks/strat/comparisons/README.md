@@ -7,25 +7,25 @@ The links below are to static renderings of the notebooks via
 Descriptions below the links are from the first cell of the notebooks
 (if that cell contains Markdown or raw text).
 
-* ##[Juan de Fuca - regional cast by cast.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/comparisons/Juan de Fuca - regional cast by cast.ipynb)  
+* ##[Juan de Fuca - regional cast by cast.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/comparisons/Juan de Fuca - regional cast by cast.ipynb)  
     
     Compare a single cast from IOS observations to model.  
       
     IOS observations span many years. So, cbservations with model on day of, 7 days before and 7 days after. This can account for spring/neap variability but not interannual variabilty in discharge, winds, etc  
 
-* ##[Stratification profiles for Sandhya.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/comparisons/Stratification profiles for Sandhya.ipynb)  
+* ##[Stratification profiles for Sandhya.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/comparisons/Stratification profiles for Sandhya.ipynb)  
     
     Notebook to generate images of stratification profiles for Sandhya.  
 
-* ##[JEMS notebook.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/comparisons/JEMS notebook.ipynb)  
+* ##[JEMS notebook.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/comparisons/JEMS notebook.ipynb)  
     
     Looking at JEMS data  
 
-* ##[Experiment with dividing ONC data into casts.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/comparisons/Experiment with dividing ONC data into casts.ipynb)  
+* ##[Experiment with dividing ONC data into casts.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/comparisons/Experiment with dividing ONC data into casts.ipynb)  
     
     A notebook to fiddle around with ONC data. Trying to divide ONC data into casts.  
 
-* ##[WOD Data-Haro.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/comparisons/WOD Data-Haro.ipynb)  
+* ##[WOD Data-Haro.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/comparisons/WOD Data-Haro.ipynb)  
     
     Notebook to play with WOD data using the wodpy package  
       
@@ -37,7 +37,7 @@ Descriptions below the links are from the first cell of the notebooks
       
 
 
-* ##[Lighthouses.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/comparisons/Lighthouses.ipynb)  
+* ##[Lighthouses.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/comparisons/Lighthouses.ipynb)  
     
     Notebook to compare Race Rocks lighthouse daily salinity readings with nowcasts.  
     * http://www.pac.dfo-mpo.gc.ca/science/oceans/data-donnees/lighthouses-phares/index-eng.html  
@@ -47,7 +47,7 @@ Descriptions below the links are from the first cell of the notebooks
       
     Temperature is also available, but it is complicated by the time shift in the high tide and the diurnal vairability in temperature. I will not look at temperature for now, but could come up with a fair comparison later.  
 
-* ##[WOD Data-pandas.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/comparisons/WOD Data-pandas.ipynb)  
+* ##[WOD Data-pandas.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/comparisons/WOD Data-pandas.ipynb)  
     
     Notebook to play with WOD data using the wodpy package  
       
@@ -59,21 +59,21 @@ Descriptions below the links are from the first cell of the notebooks
       
     Playing with new pandas supprot  
 
-* ##[JuandeFucaBCs.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/comparisons/JuandeFucaBCs.ipynb)  
+* ##[JuandeFucaBCs.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/comparisons/JuandeFucaBCs.ipynb)  
     
     Attempting to isolate data from Rob's analysis that might be useful for the Salish Sea model.  
       
     Data is from NOAA and IOS 2003-2014.(Can do a bigger date range)  
 
-* ##[Seasonal Comparison - ONC Patrols and Model.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/comparisons/Seasonal Comparison - ONC Patrols and Model.ipynb)  
+* ##[Seasonal Comparison - ONC Patrols and Model.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/comparisons/Seasonal Comparison - ONC Patrols and Model.ipynb)  
     
     Attempting a seasonal comparison at different depths between model and ONC data.  
 
-* ##[Nowcast, Spinup, Observations Comparison - JDF.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/comparisons/Nowcast, Spinup, Observations Comparison - JDF.ipynb)  
+* ##[Nowcast, Spinup, Observations Comparison - JDF.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/comparisons/Nowcast, Spinup, Observations Comparison - JDF.ipynb)  
     
     Comparisons between nowcast, spinup, and observed salinity in the Strait of Juan de Fuca  
 
-* ##[WOD Data.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/comparisons/WOD Data.ipynb)  
+* ##[WOD Data.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/comparisons/WOD Data.ipynb)  
     
     Notebook to play with WOD data using the wodpy package  
       
@@ -85,19 +85,19 @@ Descriptions below the links are from the first cell of the notebooks
       
 
 
-* ##[Summarizing IOS comparisons.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/comparisons/Summarizing IOS comparisons.ipynb)  
+* ##[Summarizing IOS comparisons.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/comparisons/Summarizing IOS comparisons.ipynb)  
     
     Notebook to summarize IOS Fall 2014 comparisons. Profile comaprisons condensed to a scatter plot.  
 
-* ##[Check on modified BCs.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/comparisons/Check on modified BCs.ipynb)  
+* ##[Check on modified BCs.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/comparisons/Check on modified BCs.ipynb)  
     
     Comparing corrected western boundary constions with observations.  
 
-* ##[Nowcast, Spinup, Observations Comparison - SOG.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/comparisons/Nowcast, Spinup, Observations Comparison - SOG.ipynb)  
+* ##[Nowcast, Spinup, Observations Comparison - SOG.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/comparisons/Nowcast, Spinup, Observations Comparison - SOG.ipynb)  
     
     Comparisons between nowcast, spinup, and observed salinity in the Strait of Georgia  
 
-* ##[Race Rocks Lighthouse.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/comparisons/Race Rocks Lighthouse.ipynb)  
+* ##[Race Rocks Lighthouse.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/comparisons/Race Rocks Lighthouse.ipynb)  
     
     Notebook to compare Race Rocks lighthouse daily salinity readings with nowcasts.  
     * http://www.pac.dfo-mpo.gc.ca/science/oceans/data-donnees/lighthouses-phares/index-eng.html  
@@ -107,33 +107,41 @@ Descriptions below the links are from the first cell of the notebooks
       
     Temperature is also available, but it is complicated by the time shift in the high tide and the diurnal vairability in temperature. I will not look at temperature for now, but could come up with a fair comparison later.  
 
-* ##[Fall 2014 IOS data.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/comparisons/Fall 2014 IOS data.ipynb)  
+* ##[Fall 2014 IOS data.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/comparisons/Fall 2014 IOS data.ipynb)  
     
-* ##[ONC Moorings.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/comparisons/ONC Moorings.ipynb)  
+* ##[ONC Moorings.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/comparisons/ONC Moorings.ipynb)  
     
     Notebook to compare model nowcasts with data from a few ONC moorings. Really, only the JDF AS04 has data overlapping data.  
       
     Observations are from Ocean Networks Canada.  
 
-* ##[Another look at JDF BCS.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/comparisons/Another look at JDF BCS.ipynb)  
+* ##[Another look at JDF BCS.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/comparisons/Another look at JDF BCS.ipynb)  
     
     A notebook to look at the JDF boundary conditions with comparisons to WOD database and IOS data.  
       
     Observed data in this region is from 1976 to 2014.  
 
-* ##[ONC Patrols.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/comparisons/ONC Patrols.ipynb)  
+* ##[ONC Patrols.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/comparisons/ONC Patrols.ipynb)  
     
     Look at ONC patrol data  
 
-* ##[Nowcast, Spinup, Observations Comparison - Haro.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/comparisons/Nowcast, Spinup, Observations Comparison - Haro.ipynb)  
+* ##[Nowcast, Spinup, Observations Comparison - Haro.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/comparisons/Nowcast, Spinup, Observations Comparison - Haro.ipynb)  
     
     Comparisons between nowcast, spinup, and observed salinity in the Haro Strait  
 
-* ##[Haro- regional cast by cast.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/strat/comparisons/Haro- regional cast by cast.ipynb)  
+* ##[Haro- regional cast by cast.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/comparisons/Haro- regional cast by cast.ipynb)  
     
     Compare a single cast from IOS observations to model.  
       
     IOS observations span many years. So, compare observations with model on day of, 7 days before and 7 days after. This can account for spring/neap variability but not interannual variabilty in discharge, winds, etc  
+
+* ##[Another look at JDF BCS - temperature.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/strat/comparisons/Another look at JDF BCS - temperature.ipynb)  
+    
+    A notebook to look at the JDF boundary conditions with comparisons to WOD database and IOS data.  
+      
+    Observed data in this region is from 1976 to 2014.  
+      
+    Focus is on temperature.  
 
 
 ##License
