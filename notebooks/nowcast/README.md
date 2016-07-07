@@ -10,6 +10,10 @@ Descriptions below the links are from the first cell of the notebooks
     
     Notebook to compare nowcast vs nowcast green along thalweg  
 
+* ##[HYCOM  - temperature and salinity time series.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/HYCOM  - temperature and salinity time series.ipynb)  
+    
+    Can we see an upwelling signal in the HYCOM results?  
+
 * ##[HYCOM - netcdf.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/HYCOM - netcdf.ipynb)  
     
     Experiemtne with HYCOM netcdf opening  
