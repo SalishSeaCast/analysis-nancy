@@ -33,10 +33,6 @@ Descriptions below the links are from the first cell of the notebooks
       
     For comparison with nowcast or nowcast-green.  
 
-* ##[Live Ocean Results.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/Live Ocean Results.ipynb)  
-    
-    Notebook to explore Live Ocean results from Parker MacCready and group (http://faculty.washington.edu/pmacc/LO/LiveOcean.html). Goal is to determine a region for extracting boundary conditions.  
-
 * ##[HYCOM-NOAA comparison.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/HYCOM-NOAA comparison.ipynb)  
     
     Notebook to compare HYCOM and NOAA  
