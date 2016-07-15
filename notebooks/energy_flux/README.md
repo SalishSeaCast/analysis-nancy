@@ -18,6 +18,17 @@ Descriptions below the links are from the first cell of the notebooks
     
     This is a notebook for developing energy flux calculations.  
 
+* ##[Barotropic energy flux - total.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/energy_flux/Barotropic energy flux - total.ipynb)  
+    
+    Check against Parker's calculations.  
+      
+    The formula I use is:  
+    $  
+    Energy flux = \rho_0*g*<(\int v_{barotropic}(t,x)*H(x)*\eta(t,x)*dx))>  
+    $  
+      
+    where $H$ is depth of a water column, $\eta$ is sea surface height, $v_{barotropic}$ is depth-averaged $y$ current, $g$ is acceleration due to gravity, $\rho_0$ is a reference density (1035 kg/m$^3$), and $<>$ represents a time average  
+
 * ##[Develop energy flux calculations.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/energy_flux/Develop energy flux calculations.ipynb)  
     
     This is a notebook for developing energy flux calculations.  
