@@ -23,14 +23,17 @@
 import sys
 import netCDF4 as nc
 
-# Bounds of subdomain
+# Bounds of subdomain (rho grid)
 XBS = [55, 80]  # x-limits
 YBS = [295, 325]  # y-limits
 # Variables to copy
 VAR_LIST = ['salt', 'temp', 'h', 'lon_rho', 'lat_rho', 'mask_rho', 'pn', 'pm',
-            's_rho', 'hc', 'Cs_r', 'Vtransform', 'zeta', 'ocean_time']
+            's_rho', 'hc', 'Cs_r', 'Vtransform', 'zeta', 'ocean_time',
+            'lon_u', 'lat_u', 'mask_u', 'u',
+            'lon_v', 'lat_v', 'mask_v', 'v']
 # Dimensions to copy
-DIM_LIST = ['xi_rho', 'eta_rho', 'N', 's_rho', 'ocean_time']
+DIM_LIST = ['xi_rho', 'eta_rho', 'N', 's_rho', 'ocean_time',
+            'xi_u', 'eta_u', 'xi_v', 'eta_v']
 
 
 def main():
@@ -63,7 +66,8 @@ def _copy_netCDF_subdomain(oldfile, newfile, xbounds, ybounds,
 def _copy_dimensions(oldfile, newfile, dim_list, xbounds, ybounds):
     """ Copy the dimensions in dims_list from oldfile to newfile.
         Dimensions of eta_rho, xi_rho are determined by limits of
-        ybounds, xbounds. """
+        ybounds, xbounds. eta_v and xi_u have one extra because of staggering.
+    """
     for dimname in dim_list:
         dim = oldfile.dimensions[dimname]
         if dimname == 'eta_rho':
@@ -72,6 +76,10 @@ def _copy_dimensions(oldfile, newfile, dim_list, xbounds, ybounds):
             newfile.createDimension(dimname, size=xbounds[1]-xbounds[0]+1)
         elif dimname == 'ocean_time':
             newfile.createDimension(dimname, size=0)
+        elif dimname == 'xi_u':
+            newfile.createDimensions(dimname, size=xbounds[1]-xbounds[0]+2)
+        elif dimname == 'eta_v':
+            newfile.createDimensions(dimname, size=ybounds[1]-ybounds[0]+2)
         else:
             newfile.createDimension(dimname, size=dim.__len__())
 
