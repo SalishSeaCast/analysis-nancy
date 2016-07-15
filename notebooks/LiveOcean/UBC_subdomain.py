@@ -70,16 +70,16 @@ def _copy_dimensions(oldfile, newfile, dim_list, xbounds, ybounds):
     """
     for dimname in dim_list:
         dim = oldfile.dimensions[dimname]
-        if dimname == 'eta_rho':
+        if dimname == 'eta_rho' or dimname == 'eta_u':
             newfile.createDimension(dimname, size=ybounds[1]-ybounds[0]+1)
-        elif dimname == 'xi_rho':
+        elif dimname == 'xi_rho' or dimname == 'xi_v':
             newfile.createDimension(dimname, size=xbounds[1]-xbounds[0]+1)
         elif dimname == 'ocean_time':
             newfile.createDimension(dimname, size=0)
         elif dimname == 'xi_u':
-            newfile.createDimensions(dimname, size=xbounds[1]-xbounds[0]+2)
+            newfile.createDimension(dimname, size=xbounds[1]-xbounds[0])
         elif dimname == 'eta_v':
-            newfile.createDimensions(dimname, size=ybounds[1]-ybounds[0]+2)
+            newfile.createDimension(dimname, size=ybounds[1]-ybounds[0])
         else:
             newfile.createDimension(dimname, size=dim.__len__())
 
@@ -97,6 +97,14 @@ def _copy_variables(oldfile, newfile, var_list, xbounds, ybounds):
         if 'eta_rho' in dims or 'xi_rho' in dims:
             newvar[:] = var[...,
                             ybounds[0]:ybounds[1]+1,
+                            xbounds[0]:xbounds[1]+1]
+        elif 'eta_u' in dims or 'xi_u' in dims:
+            newvar[:] = var[...,
+                            ybounds[0]:ybounds[1]+1,
+                            xbounds[0]:xbounds[1]]
+        elif 'eta_v' in dims or 'xi_v' in dims:
+            newvar[:] = var[...,
+                            ybounds[0]:ybounds[1],
                             xbounds[0]:xbounds[1]+1]
         else:
             newvar[:] = var[:]
