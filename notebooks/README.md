@@ -143,6 +143,12 @@ Descriptions below the links are from the first cell of the notebooks
     
     Translating Susan's grid into NEMO parameters  
 
+* ##[TEOS-10 and python gsw library.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/TEOS-10 and python gsw library.ipynb)  
+    
+    Testing seawater for TEOS-10 compatibility  
+
+* ##[Untitled.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/Untitled.ipynb)  
+    
 
 ##License
 
