@@ -145,7 +145,11 @@ Descriptions below the links are from the first cell of the notebooks
 
 * ##[TEOS-10 and python gsw library.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/TEOS-10 and python gsw library.ipynb)  
     
-    Testing seawater for TEOS-10 compatibility  
+    Testing gsw python for TEOS-10 compatibility  
+      
+    TEOS-10 - http://www.teos-10.org/  
+      
+    gsw python - https://pypi.python.org/pypi/gsw  
 
 * ##[Untitled.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/Untitled.ipynb)  
     
