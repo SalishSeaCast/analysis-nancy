@@ -2,7 +2,7 @@ addpath('/data/nsoontie/t_tide')
 addpath('/data/nsoontie/MEOPAR/analysis/Nancy/currents/t_tide_analysis')
 
 %load data
-filename='/ocean/nsoontie/MEOPAR/SalishSea/results/other_mixing/base_jul/PointAtkinson_10.nc';
+filename='/ocean/nsoontie/MEOPAR/SalishSea/results/other_mixing/biharm_1e6_tra5e5/PointAtkinson_10.nc';
 ncid = netcdf.open(filename);
 ssh = netcdf.getVar(ncid, netcdf.inqVarID(ncid,'sossheig'));
 time_counter = netcdf.getVar(ncid, netcdf.inqVarID(ncid,'time_counter'));
@@ -26,8 +26,8 @@ infamp=[.31;.27];
 infphase=[-3;-.5];
 
 %tide fit - without inferece
-outfile = 'base_jul_tides';
+outfile = 'biharm_1e6_tra5e5_tides';
 tide_struc=t_tide(ssh(t0:end),'start time',start,'latitude',lat,'interval',interval,'output',outfile);
 %tide fit - with inference
-outfile = 'base_jul_tides_inference';
+outfile = 'biharm_1e6_tra5e5_inference';
 tide_struc_inf=t_tide(ssh(t0:end),'start time',start,'latitude',lat,'interval',interval,'output',outfile, 'inference',infername, inferfrom, infamp,infphase);
