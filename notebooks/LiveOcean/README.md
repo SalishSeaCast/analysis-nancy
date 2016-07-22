@@ -10,6 +10,12 @@ Descriptions below the links are from the first cell of the notebooks
     
     Notebook to explore Live Ocean results from Parker MacCready and group (http://faculty.washington.edu/pmacc/LO/LiveOcean.html). Goal is to determine a region for extracting boundary conditions.  
 
+* ##[Live Ocean - 1 month time series.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/LiveOcean/Live Ocean - 1 month time series.ipynb)  
+    
+* ##[Working with vertical grid.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/LiveOcean/Working with vertical grid.ipynb)  
+    
+    Notebook to work with Live Ocean's vertical grid translated to depths. Loads a local module grid.py that I haven't committed because it contains code that Parker MacCready wrote.   
+
 
 ##License
 
