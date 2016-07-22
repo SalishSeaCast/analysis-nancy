@@ -36,11 +36,6 @@ DIM_LIST = ['xi_rho', 'eta_rho', 'N', 's_rho', 'ocean_time',
             'xi_u', 'eta_u', 'xi_v', 'eta_v']
 
 
-def main():
-    f_list = sys.argv[1:]
-    get_UBC_subdomain(f_list)
-
-
 def get_UBC_subdomain(f_list):
     """Create subdomain files for all netCDF files in f_list """
     for fname in f_list:
@@ -68,20 +63,20 @@ def _copy_dimensions(oldfile, newfile, dim_list, xbounds, ybounds):
         Dimensions of eta_rho, xi_rho are determined by limits of
         ybounds, xbounds. eta_v and xi_u have one extra because of staggering.
     """
+    dim_size_dict = {
+        'eta_rho': ybounds[1]-ybounds[0]+1,
+        'eta_u':  ybounds[1]-ybounds[0]+1,
+        'xi_rho': xbounds[1]-xbounds[0]+1,
+        'xi_v': xbounds[1]-xbounds[0]+1,
+        'xi_u': xbounds[1]-xbounds[0],
+        'eta_v': ybounds[1]-ybounds[0],
+        'ocean_time': 0,
+    }
     for dimname in dim_list:
         dim = oldfile.dimensions[dimname]
-        if dimname == 'eta_rho' or dimname == 'eta_u':
-            newfile.createDimension(dimname, size=ybounds[1]-ybounds[0]+1)
-        elif dimname == 'xi_rho' or dimname == 'xi_v':
-            newfile.createDimension(dimname, size=xbounds[1]-xbounds[0]+1)
-        elif dimname == 'ocean_time':
-            newfile.createDimension(dimname, size=0)
-        elif dimname == 'xi_u':
-            newfile.createDimension(dimname, size=xbounds[1]-xbounds[0])
-        elif dimname == 'eta_v':
-            newfile.createDimension(dimname, size=ybounds[1]-ybounds[0])
-        else:
-            newfile.createDimension(dimname, size=dim.__len__())
+        newfile.createDimension(
+            dimname, size=dim_size_dict.get(dimname, dim.__len__())
+        )
 
 
 def _copy_variables(oldfile, newfile, var_list, xbounds, ybounds):
@@ -111,4 +106,4 @@ def _copy_variables(oldfile, newfile, var_list, xbounds, ybounds):
 
 
 if __name__ == '__main__':
-    main()
+    get_UBC_subdomain(sys.argv[1:])
