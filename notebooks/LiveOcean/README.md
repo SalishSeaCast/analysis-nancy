@@ -12,6 +12,10 @@ Descriptions below the links are from the first cell of the notebooks
 
 * ##[Live Ocean - 1 month time series.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/LiveOcean/Live Ocean - 1 month time series.ipynb)  
     
+* ##[Interpolating Live Ocean to our boundary.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/LiveOcean/Interpolating Live Ocean to our boundary.ipynb)  
+    
+    This notebook will experiment with interpolating Live Ocean results to our boundary. The goal is that eventually these routines will be translated into a script.  
+
 * ##[Working with vertical grid.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/LiveOcean/Working with vertical grid.ipynb)  
     
     Notebook to work with Live Ocean's vertical grid translated to depths. Loads a local module grid.py that I haven't committed because it contains code that Parker MacCready wrote.   
