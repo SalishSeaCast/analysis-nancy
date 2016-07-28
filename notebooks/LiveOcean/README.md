@@ -10,11 +10,15 @@ Descriptions below the links are from the first cell of the notebooks
     
     Notebook to explore Live Ocean results from Parker MacCready and group (http://faculty.washington.edu/pmacc/LO/LiveOcean.html). Goal is to determine a region for extracting boundary conditions.  
 
+* ##[Exploring interpolation of Live Ocean.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/LiveOcean/Exploring interpolation of Live Ocean.ipynb)  
+    
+    This notebook will experiment with interpolating Live Ocean results to our boundary. The goal is that eventually these routines will be translated into a script.  
+
 * ##[Live Ocean - 1 month time series.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/LiveOcean/Live Ocean - 1 month time series.ipynb)  
     
 * ##[Interpolating Live Ocean to our boundary.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/LiveOcean/Interpolating Live Ocean to our boundary.ipynb)  
     
-    This notebook will experiment with interpolating Live Ocean results to our boundary. The goal is that eventually these routines will be translated into a script.  
+    Development of Live Ocean interpolation functions  
 
 * ##[Working with vertical grid.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/LiveOcean/Working with vertical grid.ipynb)  
     
