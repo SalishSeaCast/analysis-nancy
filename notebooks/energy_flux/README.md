@@ -18,6 +18,18 @@ Descriptions below the links are from the first cell of the notebooks
     
     This is a notebook for developing energy flux calculations.  
 
+* ##[Barotropic to baroclinic conversion.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/energy_flux/Barotropic to baroclinic conversion.ipynb)  
+    
+    Notebook to develop calculations for barotropic to baroclinic conversion,  
+      
+    $ C = <p'(-H) \vec{U}\cdot\nabla H>$  
+      
+    where $p'$ is pressure perturbation, $\vec{U}$ is barotropic velocity, $H$ is bottom topography. So bottom depth is z = -H(x,y)  
+      
+    $ p' = \int_z^0 N^2\zeta dz' - \frac{1}{H} \int_{-H}^0 \int_z^0 N^2\zeta dz' dz$  
+      
+    and $\zeta$ is isopycncal displacement. $<>$ denote an average over a tida period. See Carter et al (2008), Energetics of M2 Barotropic to Baroclinic Tidal Conversion at the Hawaiian Islands  
+
 * ##[Barotropic energy flux - total.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/energy_flux/Barotropic energy flux - total.ipynb)  
     
     Check against Parker's calculations.  
