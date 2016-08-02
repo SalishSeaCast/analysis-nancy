@@ -33,6 +33,8 @@ Descriptions below the links are from the first cell of the notebooks
       
     For comparison with nowcast or nowcast-green.  
 
+* ##[Nowcasts in victoria.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/Nowcasts in victoria.ipynb)  
+    
 * ##[HYCOM-NOAA comparison.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/HYCOM-NOAA comparison.ipynb)  
     
     Notebook to compare HYCOM and NOAA  
