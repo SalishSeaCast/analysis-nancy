@@ -50,6 +50,10 @@ Descriptions below the links are from the first cell of the notebooks
       
     For comparison with nowcast or forecast.  
 
+* ##[Rosario Strait.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/Rosario Strait.ipynb)  
+    
+    Quick check of mean volume flux throuhg a transect in Rosario Strait   
+
 * ##[SSH from JP.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/SSH from JP.ipynb)  
     
     Compare SSH and residuals from East Coast model to observations  
