@@ -66,6 +66,10 @@ Descriptions below the links are from the first cell of the notebooks
     
     Should we use constituents provided by NOAA/CHS or constituents derived from a ttide harmonic analysis?  
 
+* ##[August 2016 renewal.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/August 2016 renewal.ipynb)  
+    
+    Looking at the August 2016 renewal in nowcast-green, nowcast and obs  
+
 * ##[More on NOAA tides vs my tides.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/More on NOAA tides vs my tides.ipynb)  
     
     There is something funny about my tides compared to NOAA tides. What is it?  
