@@ -1,12 +1,14 @@
 # Script to transfer operational winds from /results to orcinus
 # Uses scp to transfer the files
+# Usage: base transfer_rivers.sh 2015-07-01 2015-10-02
+# transfers river files in interval [July 1,2015, October 2, 2015)
 
 DEST=/home/nksoonti/MEOPAR/rivers/
 SOURCE=/results/forcing/rivers/
 
 #start and end dates of the transfer period
-start=2015-07-01
-end=2015-10-02
+start=$1
+end=$2
 
 d=$(date -I -d "$start") || exit -1
 end_date=$(date -I -d "$end") || exit -1
