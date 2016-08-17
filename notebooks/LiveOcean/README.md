@@ -6,6 +6,10 @@ The links below are to static renderings of the notebooks via
 Descriptions below the links are from the first cell of the notebooks
 (if that cell contains Markdown or raw text).
 
+* ##[Live Ocean crash.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/LiveOcean/Live Ocean crash.ipynb)  
+    
+    Examine crashed run with Live Ocean Bcs. June 29, 2016 restart  
+
 * ##[Live Ocean Results.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/LiveOcean/Live Ocean Results.ipynb)  
     
     Notebook to explore Live Ocean results from Parker MacCready and group (http://faculty.washington.edu/pmacc/LO/LiveOcean.html). Goal is to determine a region for extracting boundary conditions.  
