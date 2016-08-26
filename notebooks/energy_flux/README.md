@@ -53,9 +53,17 @@ Descriptions below the links are from the first cell of the notebooks
       
     where $H$ is depth of a water column, $\eta$ is sea surface height, $v_{barotropic}$ is depth-averaged $y$ current, $g$ is acceleration due to gravity, $\rho_0$ is a reference density (1035 kg/m$^3$), and $<>$ represents a time average  
 
+* ##[Time-depended depth and scale factors - development.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/energy_flux/Time-depended depth and scale factors - development.ipynb)  
+    
+    This notebook is used to develope routines for building the time-dependent scale factors and depths  
+
 * ##[Develop energy flux calculations.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/energy_flux/Develop energy flux calculations.ipynb)  
     
     This is a notebook for developing energy flux calculations.  
+
+* ##[Hydrostatic pressure - development.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/energy_flux/Hydrostatic pressure - development.ipynb)  
+    
+    This notebook will develope tools to calculate the pressure from the hydrostatic relation.   
 
 
 ##License
