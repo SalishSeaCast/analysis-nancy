@@ -2,7 +2,7 @@
 # Only the nowcast files are downloaded. 
 # Uses wget to download files and also UBC_subdomain.py to extract subdomain
 # Original Live Ocean files (100mb each) are deleted
-# Example usage: bash download_daily.sh 2016-06-09 2016-06-20
+# Example usage: bash download_time_series.sh 2016-06-09 2016-06-20
 # downloads 24 hours for each day in [June 9, 2016, June 20, 2016)
 
 DEST=/ocean/nsoontie/MEOPAR/LiveOcean/
