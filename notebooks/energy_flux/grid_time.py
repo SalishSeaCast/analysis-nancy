@@ -5,103 +5,81 @@
 import numpy as np
 
 
-def calculate_v(e3t0, tmask):
-    """
-    Calculate the v correction factor for variable volume in NEMO.
+def calculate_mu(e3t0, tmask):
+    """Calculate the mu correction factor for variable volume in NEMO.
     e3t0 and tmask must be the same shape.
     See NEMO vvl manual appendix A.1 for details.
 
-    :arg e3t0: initial vertical scale factors on T-grid
-               Dimensions: (depth, y, x)
+    :arg e3t0: initial vertical scale factors on T-grid.
+               Dimensions: (depth, y, x).
     :type e3t0: numpy array
 
-    :arg tmask: T-grid mask
-                Dimensions: (depth, y, x)
+    :arg tmask: T-grid mask. Dimensions: (depth, y, x)
     :type tmask: numpy array
 
-    :returns: The v correction factor, a numpy array
-              Dimensions: (y, x)
+    :returns: the mu correction factor with dimensions (depth, y, x)
 
     """
+    # Iterate over k to find v and inner sum
     vn = 0
+    sum_matrix = np.zeros(e3t0.shape)
     for k in np.arange(e3t0.shape[0]):
-        sum1 = 0
+        inner_sum = 0
         for n in np.arange(k, e3t0.shape[0]):
-            sum1 = sum1 + e3t0[n, ...]*tmask[n, ...]
-        vn = vn + e3t0[k, :, :]*sum1*tmask[k, ...]
-    return vn
+            inner_sum = inner_sum + e3t0[n, ...]*tmask[n, ...]
+        sum_matrix[k, ...] = inner_sum
+        vn = vn + e3t0[k, ...]*inner_sum*tmask[k, ...]
+
+    mu = sum_matrix/vn
+    mu = np.nan_to_num(mu)  # turn nans to zeros
+    return mu
 
 
-def calculate_adjustment_factor(e3t0, tmask, v, ssh):
-    """
-    Calculate the adjustment factor for variable volume in NEMO.
+def calculate_adjustment_factor(mu, ssh):
+    """Calculate the time=dependent adjustment factor for variable volume in
+    NEMO. adj = (1+ssh*mu) and e3t_t = e3t_0*adj
     See NEMO vvl manual appendix A.1 for details.
 
-    :arg e3t0: Initial vertical scale factors on T-grid
-               Dimensions: (depth, y, x)
-    :type e3t0: numpy array
+    :arg mu: mu correction factor. Dimension: (depth, y, x)
+    :type mu: numpy array
 
-    :arg tmask: T-grid mask.
-                Dimensions: (depth, y, x)
-    :type tmask: numpy array
-
-    :arg v: v correction factor.
-            Dimensions: (y, x)
-    :type v: numpy array
-
-    :arg ssh: The model sea surface height
-              Dimensions: (time, depth, y, x)
+    :arg ssh: the model sea surface height. Dimensions: (time, y, x)
     :type ssh: numpy array
 
-    :returns: The adjustment factor, a numpy array
-              Dimensions (time, depth, y, x)
+    :returns: the adjustment factor with dimensions (time, depth, y, x)
     """
-    # Define shape of adj
-    shape = list(e3t0.shape[:])
-    shape.insert(0, ssh.shape[0])
-    adj = np.zeros(shape)
-
-    for k in np.arange(e3t0.shape[0]):
-        sum1 = 0
-        for n in np.arange(k, e3t0.shape[0]):
-            sum1 = sum1 + e3t0[n, ...]*tmask[n, ...]
-        adj[:, k, ...] = (1 + ssh/v*sum1)
-    inds = np.where(np.isnan(adj))
-    adj[inds] = 1  # Turn nans into ones
+    # Give ssh a depth dimension
+    ssh = np.expand_dims(ssh, axis=1)
+    adj = (1 + ssh*mu)
 
     return adj
 
 
 def calculate_vertical_grids(e3t0, tmask, ssh):
-    """
-    Calcuate the time dependent vertical grids and scale factors for
-    variable volume in NEMO.
-    See NEMO vvl manual appendix A.1 for details.
+    """ Calculate the time dependent vertical grids and scale factors for
+    variable volume in NEMO. See NEMO vvl manual appendix A.1 for details.
 
-    :arg e3t0: Initial vertical scale factors on T-grid
+    :arg e3t0: initial vertical scale factors on T-grid.
                Dimensions: (depth, y, x).
     :type e3t0: numpy array
 
-    :arg tmask: T-grid mask
-                Dimensions: (depth, y, x)
+    :arg tmask: T-grid mask. Dimensions: (depth, y, x)
     :type tmask: numpy array
 
-    :arg ssh: Model sea surface height
-              Dimensions: (time, depth, y, x)
+    :arg ssh: the model sea surface height. Dimensions: (time, depth, y, x)
     :type ssh: numpy array
 
     :returns: e3t_t, e3t_3, gdept_t, gdept_w
-    The time dependent vertical scale factors on t and w grids and depths
-    on t and w grids.
+    The time dependent vertical scale factors on t and w grids and depths on
+    t and w grids.
     Dimensions: (time, depth, y, x)
     """
-
     # adjustment factors
-    vn = calculate_v(e3t0, tmask)
-    adj = calculate_adjustment_factor(e3t0, tmask, vn, ssh)
+    mu = calculate_mu(e3t0, tmask)
+    adj = calculate_adjustment_factor(mu, ssh)
     # scale factors
     e3t_t = e3t0*adj
-    # initialize for k=0
+    # intiliaize for k=0
     e3w_t = np.copy(e3t_t)
     # overwrite k>0
     e3w_t[:, 1:, ...] = 0.5*(e3t_t[:, 1:, ...] + e3t_t[:, 0:-1, ...])
@@ -109,8 +87,8 @@ def calculate_vertical_grids(e3t0, tmask, ssh):
     # initialize for k=0
     gdept_t = 0.5*e3t_t
     gdepw_t = np.zeros(gdept_t.shape)
+    # overwrite k>0
     for k in np.arange(1, gdept_t.shape[1]):
-        # overwrite k>0
         gdept_t[:, k, ...] = gdept_t[:, k-1, ...] + e3w_t[:, k, ...]
         gdepw_t[:, k, ...] = gdepw_t[:, k-1, ...] + e3t_t[:, k-1, ...]
 
