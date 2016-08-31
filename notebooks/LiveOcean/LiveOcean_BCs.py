@@ -573,5 +573,4 @@ def _create_sub_file(date, time_unit, var_arrays, var_meta,
     print('Saved {}'.format(filename))
 
 if __name__ == '__main__':
-    create_files_for_nowcast(sys.argv[1:])
-
+    create_files_for_nowcast(sys.argv[1])
