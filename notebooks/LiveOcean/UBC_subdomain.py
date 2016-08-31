@@ -30,7 +30,9 @@ YBS = [295, 325]  # y-limits
 VAR_LIST = ['salt', 'temp', 'h', 'lon_rho', 'lat_rho', 'mask_rho', 'pn', 'pm',
             's_rho', 'hc', 'Cs_r', 'Vtransform', 'zeta', 'ocean_time',
             'lon_u', 'lat_u', 'mask_u', 'u',
-            'lon_v', 'lat_v', 'mask_v', 'v']
+            'lon_v', 'lat_v', 'mask_v', 'v'
+            'NO3', 'phytoplankton', 'zooplankton', 'detritus', 'Ldetritus',
+            'oxygen', 'TIC', 'alkalinity', 'CaCO3', 'rho']
 # Dimensions to copy
 DIM_LIST = ['xi_rho', 'eta_rho', 'N', 's_rho', 'ocean_time',
             'xi_u', 'eta_u', 'xi_v', 'eta_v']
@@ -82,27 +84,30 @@ def _copy_dimensions(oldfile, newfile, dim_list, xbounds, ybounds):
 def _copy_variables(oldfile, newfile, var_list, xbounds, ybounds):
     """Copy variables in var_list from oldfile to newfile for subdomain
         [xbounds, ybounds]"""
+    varnames_in_file = list(oldfile.variables.keys())
     for varname in var_list:
-        var = oldfile.variables[varname]
-        dims = var.dimensions
-        newvar = newfile.createVariable(varname, var.datatype, dims)
-        # copy variable attributes
-        newvar.setncatts({att: var.getncattr(att) for att in var.ncattrs()})
-        # fill data
-        if 'eta_rho' in dims or 'xi_rho' in dims:
-            newvar[:] = var[...,
-                            ybounds[0]:ybounds[1]+1,
-                            xbounds[0]:xbounds[1]+1]
-        elif 'eta_u' in dims or 'xi_u' in dims:
-            newvar[:] = var[...,
-                            ybounds[0]:ybounds[1]+1,
-                            xbounds[0]:xbounds[1]]
-        elif 'eta_v' in dims or 'xi_v' in dims:
-            newvar[:] = var[...,
-                            ybounds[0]:ybounds[1],
-                            xbounds[0]:xbounds[1]+1]
-        else:
-            newvar[:] = var[:]
+        if varname in varnames_in_file:
+            var = oldfile.variables[varname]
+            dims = var.dimensions
+            newvar = newfile.createVariable(varname, var.datatype, dims)
+            # copy variable attributes
+            newvar.setncatts({att: var.getncattr(att)
+                             for att in var.ncattrs()})
+            # fill data
+            if 'eta_rho' in dims or 'xi_rho' in dims:
+                newvar[:] = var[...,
+                                ybounds[0]:ybounds[1]+1,
+                                xbounds[0]:xbounds[1]+1]
+            elif 'eta_u' in dims or 'xi_u' in dims:
+                newvar[:] = var[...,
+                                ybounds[0]:ybounds[1]+1,
+                                xbounds[0]:xbounds[1]]
+            elif 'eta_v' in dims or 'xi_v' in dims:
+                newvar[:] = var[...,
+                                ybounds[0]:ybounds[1],
+                                xbounds[0]:xbounds[1]+1]
+            else:
+                newvar[:] = var[:]
 
 
 if __name__ == '__main__':
