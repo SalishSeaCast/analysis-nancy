@@ -65,6 +65,10 @@ Descriptions below the links are from the first cell of the notebooks
     
     This notebook will develope tools to calculate the pressure from the hydrostatic relation.   
 
+* ##[Plotting with time dependent depths.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/energy_flux/Plotting with time dependent depths.ipynb)  
+    
+    This is a notebook to explore how to plot with time dependent depths.  
+
 
 ##License
 
