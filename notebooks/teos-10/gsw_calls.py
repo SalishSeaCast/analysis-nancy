@@ -21,7 +21,7 @@ def call_p_from_z(z, lat):
                                                            zfile,
                                                            latfile)
     cmd = ["matlab", "-nodesktop", "-nodisplay", "-r", functioncall]
-    sp.run(cmd)
+    sp.call(cmd)
     pressure = np.loadtxt(fname[1:-1], delimiter=',')
     for f in [fname[1:-1], zfile[1:-1], latfile[1:-1]]:
         os.remove(f)
@@ -46,7 +46,7 @@ def call_SA_from_SP(SP, p, long, lat):
                                                                    longfile,
                                                                    latfile)
     cmd = ["matlab", "-nodesktop", "-nodisplay", "-r", functioncall]
-    sp.run(cmd)
+    sp.call(cmd)
     SA = np.loadtxt(fname[1:-1], delimiter=',')
 
     for f in [fname[1:-1], SPfile[1:-1], pfile[1:-1],
@@ -70,7 +70,7 @@ def call_CT_from_PT(SA, PT):
                                                              SAfile,
                                                              PTfile)
     cmd = ["matlab", "-nodesktop", "-nodisplay", "-r", functioncall]
-    sp.run(cmd)
+    sp.call(cmd)
     CT = np.loadtxt(fname[1:-1], delimiter=',')
 
     for f in [fname[1:-1], SAfile[1:-1], PTfile[1:-1]]:
