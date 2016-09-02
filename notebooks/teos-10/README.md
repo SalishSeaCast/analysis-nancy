@@ -6,15 +6,6 @@ The links below are to static renderings of the notebooks via
 Descriptions below the links are from the first cell of the notebooks
 (if that cell contains Markdown or raw text).
 
-* ##[Temperature to conservative temperature in boundary conditions.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/teos-10/Temperature to conservative temperature in boundary conditions.ipynb)  
-    
-    This notebook is used to convert Potential Temperature to Conservative Temperature in our boundary conditions. It makes use of the MATLAB gsw library.  
-
-* ##[Matlab and python.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/teos-10/Matlab and python.ipynb)  
-    
-    **Running matlab from python**  
-
-
 * ##[What is Delta S on our open boundaries.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/teos-10/What is Delta S on our open boundaries.ipynb)  
     
     This notebook is to decide $S_A = S_{ref}$ is a good approximation along our open boundary.  
