@@ -75,7 +75,15 @@ def load_LiveOcean(files, resample_interval='1H'):
     # Loop through files and load
     d = xr.open_dataset(files[0])
     for f in files[1:]:
+        dvars = d.data_vars
         with xr.open_dataset(f) as d1:
+            # drop uncommon variables
+            d1vars = d1.data_vars
+            diff = set(dvars) - set(d1vars)
+            if diff.isubset(set(d1vars)):
+                d1 = d1.drop(list(diff))
+            if diff.isubset(set(dvars)):
+                d = d.drop(list(diff))
             d = xr.concat([d, d1], dim='ocean_time', data_vars='minimal')
     # Determine z-rho (depth)
     G, S, T = grid.get_basic_info(files[0])  # note: grid.py is from Parker
