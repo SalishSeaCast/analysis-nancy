@@ -5,7 +5,7 @@
 # Example usage: bash download_time_series.sh 2016-06-09 2016-06-20
 # downloads 24 hours for each day in [June 9, 2016, June 20, 2016)
 
-DEST=/ocean/nsoontie/MEOPAR/LiveOcean/
+DEST=/ocean/nsoontie/MEOPAR/LiveOcean/subdomain_files/
 SOURCE=https://pm2.blob.core.windows.net/f
 
 d=$(date -I -d "$1") || exit -1
