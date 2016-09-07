@@ -14,6 +14,7 @@ from scipy import interpolate
 import glob
 import os
 import sys
+import re
 
 # Special python module provided by Parker MacCready
 import grid
@@ -77,13 +78,14 @@ def load_LiveOcean(files, resample_interval='1H'):
     for f in files[1:]:
         dvars = d.data_vars
         with xr.open_dataset(f) as d1:
-            # drop uncommon variables
+            # drop uncommon variables - subfunction?
             d1vars = d1.data_vars
-            diff = set(dvars) - set(d1vars)
-            if diff.isubset(set(d1vars)):
-                d1 = d1.drop(list(diff))
-            if diff.isubset(set(dvars)):
-                d = d.drop(list(diff))
+            diff = set(dvars) ^ set(d1vars)
+            rm_d1 = set(d1vars) & diff
+            d1 = d1.drop(list(rm_d1))
+            rmd = set(dvars) & diff
+            d = d.drop(list(rmd))
+            # concatenate
             d = xr.concat([d, d1], dim='ocean_time', data_vars='minimal')
     # Determine z-rho (depth)
     G, S, T = grid.get_basic_info(files[0])  # note: grid.py is from Parker
@@ -357,9 +359,13 @@ def _list_LO_time_series_files(start, end, LO_dir):
         if filename >= sstr and filename <= estr:
             files.append(filename)
 
-    files.sort()
+    # remove files outside of first 24hours for each day
+    regex = re.compile(r'_00[3-7][0-9]|_002[6-9]')
+    keeps = [x for x in files if not regex.search(x)]
 
-    return files
+    keeps.sort()
+
+    return keeps
 
 
 def _list_LO_rundate_files(rundate, LO_dir):
