@@ -30,7 +30,7 @@ YBS = [295, 325]  # y-limits
 VAR_LIST = ['salt', 'temp', 'h', 'lon_rho', 'lat_rho', 'mask_rho', 'pn', 'pm',
             's_rho', 'hc', 'Cs_r', 'Vtransform', 'zeta', 'ocean_time',
             'lon_u', 'lat_u', 'mask_u', 'u',
-            'lon_v', 'lat_v', 'mask_v', 'v'
+            'lon_v', 'lat_v', 'mask_v', 'v',
             'NO3', 'phytoplankton', 'zooplankton', 'detritus', 'Ldetritus',
             'oxygen', 'TIC', 'alkalinity', 'CaCO3', 'rho']
 # Dimensions to copy
