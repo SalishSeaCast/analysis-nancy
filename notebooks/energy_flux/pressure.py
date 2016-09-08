@@ -33,7 +33,7 @@ def hydrostatic_pressure(rho, e3t, gdept, tmask, return_masked=True):
     # Attempt to approximate p(z=0)=0.
     p = p - np.expand_dims(g*rho[:, 0, ...]*gdept[:, 0, ...], axis=1)
     if return_masked:
-        p = np.array(p, mask=np.ones(p.shape) - tmask)
+        p = np.ma.array(p, mask=np.ones(p.shape) - tmask)
     return p
 
 
