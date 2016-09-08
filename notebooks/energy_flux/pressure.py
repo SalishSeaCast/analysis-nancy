@@ -86,7 +86,7 @@ def internal_tide_pressure(p, e3t, tmask, return_masked=True):
               Dimensions: (time, depth, y, x)"""
 
     p_davg = depth_average_pressure(p, e3t, tmask)
-    p_it = p - np.exand_dims(p_davg, axis=1)
+    p_it = p - np.expand_dims(p_davg, axis=1)
     if return_masked:
         p_it = np.ma.array(p_it, mask=np.ones(p_it.shape) - tmask)
     return p_it
