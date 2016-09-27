@@ -80,6 +80,13 @@ Descriptions below the links are from the first cell of the notebooks
     
     Compare March 14, 2016 currents with OceanViewer  
 
+* ##[Sept-nowcast-green.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/Sept-nowcast-green.ipynb)  
+    
+    I donwloaded recent water level observations from this website.  
+    http://www.pac.dfo-mpo.gc.ca/science/charts-cartes/obs-app/observed-eng.aspx?StationID=07795  
+      
+    For comparison with nowcast or nowcast-green in September 2016  
+
 * ##[VENUS.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/VENUS.ipynb)  
     
     Playing with pulling VENUS data.  
