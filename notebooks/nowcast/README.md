@@ -33,6 +33,10 @@ Descriptions below the links are from the first cell of the notebooks
       
     For comparison with nowcast or nowcast-green.  
 
+* ##[Mean sea level of nowcast vs nowcast-green.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/Mean sea level of nowcast vs nowcast-green.ipynb)  
+    
+    Explore mean sea level in nowcast and nowcast-green  
+
 * ##[Nowcasts in victoria.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/Nowcasts in victoria.ipynb)  
     
 * ##[HYCOM-NOAA comparison.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/HYCOM-NOAA comparison.ipynb)  
@@ -64,6 +68,13 @@ Descriptions below the links are from the first cell of the notebooks
     
     Thie notebook examines the NOAA tidal predictions at Neah Bay.  
 
+* ##[Sept-nowcast-green-CampbellRiver.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/Sept-nowcast-green-CampbellRiver.ipynb)  
+    
+    I donwloaded recent water level observations from this website.  
+    http://www.pac.dfo-mpo.gc.ca/science/charts-cartes/obs-app/observed-eng.aspx?StationID=07795  
+      
+    For comparison with nowcast or nowcast-green in September 2016  
+
 * ##[Which constituents.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/Which constituents.ipynb)  
     
     Should we use constituents provided by NOAA/CHS or constituents derived from a ttide harmonic analysis?  
@@ -75,6 +86,13 @@ Descriptions below the links are from the first cell of the notebooks
 * ##[More on NOAA tides vs my tides.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/More on NOAA tides vs my tides.ipynb)  
     
     There is something funny about my tides compared to NOAA tides. What is it?  
+
+* ##[Sept-nowcast-green-Victoria.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/Sept-nowcast-green-Victoria.ipynb)  
+    
+    I donwloaded recent water level observations from this website.  
+    http://www.pac.dfo-mpo.gc.ca/science/charts-cartes/obs-app/observed-eng.aspx?StationID=07795  
+      
+    For comparison with nowcast or nowcast-green in September 2016  
 
 * ##[Currents for comparison with Ocean Viewer.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/Currents for comparison with Ocean Viewer.ipynb)  
     
