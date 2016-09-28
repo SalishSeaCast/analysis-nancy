@@ -271,7 +271,7 @@ def plot_CODAR_ellipse(ax, lons, lats, const, datastruc, depths, grid, step=3,
         title_str = 'barotropic'
     else:
         title_str = 'surface'
-    for i in np.arange(0, lons.shape[-1], step):
+    for i in np.arange(0, lons.shape[0], step):
         for j in np.arange(0, lats.shape[-1], step):
             if major[i, j]:
                 plot_ellipse(lons[i, j], lats[i, j], inc[i, j],
@@ -328,7 +328,7 @@ def plot_ellipse_phase_arrow(ax, lons, lats, const, datastruc, time_deg,
         v = v[:, :, depth_level]
     ax.quiver(lons[::step, ::step], lats[::step, ::step],
               u[::step, ::step], v[::step, ::step], scale=scale,
-              width=0.008, zorder=10, color='black', pivot='tail',
+              width=0.002, zorder=10, color='black', pivot='tail',
               headwidth=1, headlength=1)
 
 
