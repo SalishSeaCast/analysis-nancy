@@ -17,6 +17,7 @@ def save_netcdf(times, us, vs, depths, station, lons, lats, to, tf):
     path = '/ocean/nsoontie/MEOPAR/TidalEllipseData/ModelTimeSeries/'
     fname = '{}_currents_{}_{}.nc'.format(station, to.strftime('%Y%m%d'),
                                           tf.strftime('%Y%m%d'))
+    print(fname)
     nc_file = nc.Dataset(os.path.join(path, fname), 'w')
     # dataset attributes
     nc_tools.init_dataset_attrs(
@@ -287,12 +288,12 @@ def plot_CODAR_ellipse(ax, lons, lats, const, datastruc, depths, grid, step=3,
         viz_tools.plot_coastline(ax, grid, coords='map', isobath=isobath)
 
 
-def add_scale_ellipse(ax, lon, lat, dx=-.1, dy=.01, scale=0.08):
+def add_scale_ellipse(ax, lon, lat, dx=-.1, dy=.01, scale=0.08, speed=0.5):
     """Add scale ellipse"""
-    ell = Ellipse(xy=(lon, lat), width = scale*0.5, height = scale*0.5,
+    ell = Ellipse(xy=(lon, lat), width = scale*speed, height = scale*speed,
                   angle = 45, color='g')
     ax.add_artist(ell)
-    ax.text(lon + dx, lat + dy, '0.5 m/s', color='g',
+    ax.text(lon + dx, lat + dy, '{} m/s'.format(speed), color='g',
             fontsize=12, fontweight='heavy')
 
 
