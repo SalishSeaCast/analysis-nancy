@@ -1,4 +1,4 @@
-# Script to generate a netcdf file with the hourly time series of the currents
+1# Script to generate a netcdf file with the hourly time series of the currents
 # at the three VENUS nodes - central, east, ddl
 
 import datetime
@@ -11,9 +11,9 @@ import baroclinic
 
 NodalCorr = tidetools.CorrTides
 
-to = datetime.datetime(2014, 11, 26)
-tf = datetime.datetime(2015, 7, 13)
-path = '/data/dlatorne/MEOPAR/SalishSea/nowcast/'
+to = datetime.datetime(2016, 6, 22)
+tf = datetime.datetime(2016, 8, 25)
+path = '/results/SalishSea/nowcast/'
 grid = nc.Dataset('/data/nsoontie/MEOPAR/NEMO-forcing/grid/bathy_meter_SalishSea2.nc')
 lon_grid = grid.variables['nav_lon']
 lat_grid = grid.variables['nav_lat']
@@ -31,4 +31,4 @@ lons = lon_grid[jss, iss]
 lats = lat_grid[jss, iss]
 
 baroclinic.save_netcdf(times, us, vs, depths, 'CODAR', lons, lats, to, tf)
-print 'Finished'
+print('Finished')
