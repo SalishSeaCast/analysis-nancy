@@ -34,6 +34,8 @@ Descriptions below the links are from the first cell of the notebooks
 
 * ##[Baroclinic tides domain.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/Baroclinic tides domain.ipynb)  
     
+* ##[Mean surface currents June 22-Aug 25, 2016.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/Mean surface currents June 22-Aug 25, 2016.ipynb)  
+    
 * ##[North SoG and BP Internal wave beams.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/North SoG and BP Internal wave beams.ipynb)  
     
     Notebook to explore the possibility of internal wave beams generate at the slopes of the fraser river.  
@@ -66,6 +68,10 @@ Descriptions below the links are from the first cell of the notebooks
 * ##[Internal wave beams and boundary current.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/Internal wave beams and boundary current.ipynb)  
     
     Notebook to explore the possibility of internal wave beams near the Fraser River banks and Rich's boundary current.  
+
+* ##[M2 Ellipses in new CODAR region.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/M2 Ellipses in new CODAR region.ipynb)  
+    
+    Look at the M2 surface tidal ellipses in the CODAR region (including the new CODAR at Active Pass)  
 
 * ##[Generation of internal waves at Boundary Pass.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/Generation of internal waves at Boundary Pass.ipynb)  
     
