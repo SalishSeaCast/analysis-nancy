@@ -12,7 +12,7 @@ function area_baroclinic_tides(filename, outfile, depthfile, t0, ref_time, time_
 
 % load data
 [u, v, depth, time, lons, lats] = load_netcdf(filename);
-[istart, jstart] = find_starting_index(lons , lats);
+[istart, jstart] = find_starting_index(lons(1,1), lats(1,1));
 icount=istart;
 jcount=jstart;
 % load dept, scale factors and tmask
