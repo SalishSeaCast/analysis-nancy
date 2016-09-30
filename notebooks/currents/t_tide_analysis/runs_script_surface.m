@@ -5,12 +5,12 @@ outs = cell(1);
 depthfile = '/data/nsoontie/MEOPAR/NEMO-forcing/grid/mesh_mask_SalishSea2.nc';
 
 %files{1} = '/ocean/nsoontie/MEOPAR/TidalEllipseData/ModelTimeSeries/BP_currents_20160622_20160825.nc';
-files{1} = '/ocean/nsoontie/MEOPAR/TidalEllipseData/ModelTimeSeries/CODAR_currents_20160622_20160825.nc';
+files{1} = '/ocean/nsoontie/MEOPAR/TidalEllipseData/ModelTimeSeries/NSoG_currents_20141126_20150426.nc';
 %files{3} = '/ocean/nsoontie/MEOPAR/TidalEllipseData/ModelTimeSeries/VictoriaSill_currents_20141126_20150426.nc';
 %files{4} = '/ocean/nsoontie/MEOPAR/TidalEllipseData/ModelTimeSeries/JuandeFuca_currents_20141126_20150426.nc';
 
 %outs{1} = '/ocean/nsoontie/MEOPAR/TidalEllipseData/BP_region_surface_20160622_20160825.mat';
-outs{1} = '/ocean/nsoontie/MEOPAR/TidalEllipseData/CODAR/CODAR_region_surface_20160622_20160825.mat';
+outs{1} = '/ocean/nsoontie/MEOPAR/TidalEllipseData/CODAR/NSoG_region_surface_20141126_20150426.mat';
 %outs{3} = '/ocean/nsoontie/MEOPAR/TidalEllipseData/VictoriaSill_baroclinic_depav_20141126_20150426_masked.mat';
 %outs{4} = '/ocean/nsoontie/MEOPAR/TidalEllipseData/JuandeFuca_baroclinic_depav_20141126_20150426_masked.mat';
 

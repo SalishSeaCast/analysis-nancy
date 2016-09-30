@@ -1,18 +1,18 @@
 addpath('/data/nsoontie/t_tide')
 
-files = cell(4);
-outs = cell(4);
+files = cell(1);
+outs = cell(1);
 depthfile = '/data/nsoontie/MEOPAR/NEMO-forcing/grid/mesh_mask_SalishSea2.nc';
 
-files{1} = '/ocean/nsoontie/MEOPAR/TidalEllipseData/ModelTimeSeries/CODAR_currents_20141126_20150426.nc';
-files{2} = '/ocean/nsoontie/MEOPAR/TidalEllipseData/ModelTimeSeries/BP_currents_20141126_20150426.nc';
-files{3} = '/ocean/nsoontie/MEOPAR/TidalEllipseData/ModelTimeSeries/VictoriaSill_currents_20141126_20150426.nc';
-files{4} = '/ocean/nsoontie/MEOPAR/TidalEllipseData/ModelTimeSeries/JuandeFuca_currents_20141126_20150426.nc';
+files{1} = '/ocean/nsoontie/MEOPAR/TidalEllipseData/ModelTimeSeries/NSoG_currents_20141126_20150426.nc';
+%files{2} = '/ocean/nsoontie/MEOPAR/TidalEllipseData/ModelTimeSeries/BP_currents_20141126_20150426.nc';
+%files{3} = '/ocean/nsoontie/MEOPAR/TidalEllipseData/ModelTimeSeries/VictoriaSill_currents_20141126_20150426.nc';
+%files{4} = '/ocean/nsoontie/MEOPAR/TidalEllipseData/ModelTimeSeries/JuandeFuca_currents_20141126_20150426.nc';
 
-outs{1} = '/ocean/nsoontie/MEOPAR/TidalEllipseData/CODAR/CODAR_region_baroclinic_20141126_20150426_masked.mat';
-outs{2} = '/ocean/nsoontie/MEOPAR/TidalEllipseData/BP_region_baroclinic_20141126_20150426_masked.mat';
-outs{3} = '/ocean/nsoontie/MEOPAR/TidalEllipseData/VictoriaSill_baroclinic_depav_20141126_20150426_masked.mat';
-outs{4} = '/ocean/nsoontie/MEOPAR/TidalEllipseData/JuandeFuca_baroclinic_depav_20141126_20150426_masked.mat';
+outs{1} = '/ocean/nsoontie/MEOPAR/TidalEllipseData/NSoG_region_baroclinic_20141126_20150426_masked.mat';
+%outs{2} = '/ocean/nsoontie/MEOPAR/TidalEllipseData/BP_region_baroclinic_20141126_20150426_masked.mat';
+%outs{3} = '/ocean/nsoontie/MEOPAR/TidalEllipseData/VictoriaSill_baroclinic_depav_20141126_20150426_masked.mat';
+%outs{4} = '/ocean/nsoontie/MEOPAR/TidalEllipseData/JuandeFuca_baroclinic_depav_20141126_20150426_masked.mat';
 
 %% Bathy mods
 % files{1} = '/data/nsoontie/MEOPAR/SalishSea/results/tides/bathymods/bathy2/CODAR_all.nc';
