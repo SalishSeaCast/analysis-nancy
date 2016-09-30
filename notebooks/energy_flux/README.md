@@ -12,7 +12,7 @@ Descriptions below the links are from the first cell of the notebooks
 
 * ##[Time-dependent depth and scale factors - development.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/energy_flux/Time-dependent depth and scale factors - development.ipynb)  
     
-    This notebook is used to develoe routines for building the time-dependent scale factors and depths in NEMO with variable volume (vvl).  
+    This notebook is used to develop routines for building the time-dependent scale factors and depths in NEMO with variable volume (vvl).  
 
 * ##[JDF energy fluxes.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/energy_flux/JDF energy fluxes.ipynb)  
     
@@ -40,6 +40,12 @@ Descriptions below the links are from the first cell of the notebooks
 * ##[Develop energy flux calculations.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/energy_flux/Develop energy flux calculations.ipynb)  
     
     This is a notebook for developing energy flux calculations.  
+
+* ##[Testing conversion.py.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/energy_flux/Testing conversion.py.ipynb)  
+    
+* ##[Barotropic Energy flux -- all.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/energy_flux/Barotropic Energy flux -- all.ipynb)  
+    
+    All of the energy flux calculations in one plot  
 
 * ##[Hydrostatic pressure - development.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/energy_flux/Hydrostatic pressure - development.ipynb)  
     
