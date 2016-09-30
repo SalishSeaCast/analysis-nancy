@@ -10,6 +10,7 @@ import numpy as np
 import datetime
 
 from scipy import interpolate
+import mpl_toolkits.basemap as Basemap
 
 import glob
 import os
@@ -208,22 +209,44 @@ def interpolate_to_NEMO_lateral(var_arrays, dataset, NEMOlon, NEMOlat, shape):
     # reshape our NEMO BC grid to use griddata
     longrid = NEMOlon.reshape(shape)
     latgrid = NEMOlat.reshape(shape)
-    NEMO_points = (longrid, latgrid)
-    # combine LiveOcean grid to use griddata
-    LO_points = np.array([dataset.lon_rho.values[:].flatten(),
-                          dataset.lat_rho.values[:].flatten()]).T
+    # LiveOcean grid
+    lonsLO = dataset.lon_rho.values[0, :]
+    latsLO = dataset.lat_rho.values[:, 0]
     # interpolate each variable
     interps = {}
     for var_name, var in var_arrays.items():
         var_new = np.zeros((var.shape[0], var.shape[1], 1, shape[0]*shape[1]))
+        mask = var_new.copy()
+        interp_nearest = var_new.copy()
         for t in np.arange(var_new.shape[0]):
             for k in np.arange(var_new.shape[1]):
                 var_grid = var[t, k, :, :]
-                var_interp = interpolate.griddata(LO_points,
-                                                  var_grid.flatten(),
-                                                  NEMO_points)
-                var_new[t, k, 0, :] = var_interp.flatten()
-        interps[var_name] = fill_NaNs_with_nearest_neighbour(var_new, NEMOlon,
+                # First, interpolate with bilinear. The result is masked near
+                # and at grid points where var_grid is masked.
+                var_interp = Basemap.interp(var_grid,
+                                            lonsLO,
+                                            latsLO,
+                                            NEMOlon,
+                                            NEMOlat)
+                # Keep track of mask
+                mask[t, k, 0, :] = var_interp.mask
+                # Next, interpolate using nearest neighbour so that masked
+                # areas can be filled later.
+                interp_nearest[t, k, 0, :] = Basemap.interp(var_grid,
+                                                            lonsLO,
+                                                            latsLO,
+                                                            NEMOlon,
+                                                            NEMOlat,
+                                                            order=0)
+                # ave bilinear intepr in var_new
+                var_new[t, k, 0, :] = var_interp
+        # Fill in masked values with nearest neighbour interpolant
+        inds_of_mask = np.where(mask == 1)
+        var_new[inds_of_mask] = interp_nearest[inds_of_mask]
+        # There are still some nans over pure land areas.
+        # Fill those with nearest lateral neighbour or level above
+        interps[var_name] = fill_NaNs_with_nearest_neighbour(var_new,
+                                                             NEMOlon,
                                                              NEMOlat)
 
     return interps
