@@ -29,6 +29,14 @@ Descriptions below the links are from the first cell of the notebooks
     
     An example of how I would like to use MFDataset for reading in atmopsheric model.   
 
+* ##[Calling Matlab GSW.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/Calling Matlab GSW.ipynb)  
+    
+    This is a notebook to experiment with calling a python wrapper for the teos-10 matlab library.  
+      
+    The python module is gsw_calls.py, currently stored in /data/nsoontie/MEOPAR/tools/I_ForcingFiles/OBC, along with the matlab wrappers for the gsw routines.   
+      
+    The function call_generic_gsw() links the appropriate matlab scripts to the current directory, saves all the input files to individual text files, then calls the matlab wrapper script which read the input files and saves the ouptut to a text file. Python then reads the output file, rehsapes and returns as a numpy array. It also removes the links and deletes the temporary text files.   
+
 * ##[New GEM Time Series Nov18--.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/New GEM Time Series Nov18--.ipynb)  
     
     This notebook will examine the GEM model wind direction and speed by compareing a time series with observations. I will examine   
@@ -151,8 +159,6 @@ Descriptions below the links are from the first cell of the notebooks
       
     gsw python - https://pypi.python.org/pypi/gsw  
 
-* ##[Untitled.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/Untitled.ipynb)  
-    
 
 ##License
 
