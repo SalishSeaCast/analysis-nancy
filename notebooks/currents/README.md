@@ -20,6 +20,10 @@ Descriptions below the links are from the first cell of the notebooks
     
     Compare NEMO 3.6 tidal curretns with NEMO 3.4  
 
+* ##[Baroclinic Kinetic Energy.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/Baroclinic Kinetic Energy.ipynb)  
+    
+    Looking at the M2 baroclinic kinetic energy which I define as 0.5*(major^2 +minor^2)  
+
 * ##[Explore recombining CODAR files.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/Explore recombining CODAR files.ipynb)  
     
     Attempt at concatenating netcdf subdomain files.  
@@ -91,10 +95,6 @@ Descriptions below the links are from the first cell of the notebooks
 
 * ##[Isopycnal displacement.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/Isopycnal displacement.ipynb)  
     
-* ##[M2 Baroclinic Kinetic Energy.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/M2 Baroclinic Kinetic Energy.ipynb)  
-    
-    Looking at the M2 baroclinic kinetic energy which I define as 0.5*(major^2 +minor^2)  
-
 * ##[Bathymetry modifications and tides.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/Bathymetry modifications and tides.ipynb)  
     
     A notebook to examine how modifications to the bathymetry have affected the baroclinic tides.  
