@@ -1,3 +1,4 @@
 notebooks/teos-10/*.m
 notebooks/strat/comparisons/JuandeFucaMouth.dat
 notebooks/nowcast/data/*
+notebooks/currents/images/*
