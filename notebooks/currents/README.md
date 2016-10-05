@@ -67,6 +67,10 @@ Descriptions below the links are from the first cell of the notebooks
       
     Both barotropic and baroclinic were calcualted using a now cast time series Nov 26, 2014- April 26, 2015  
 
+* ##[TS Profiles for Modes.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/TS Profiles for Modes.ipynb)  
+    
+    Average TS profiles over my tidal analysis period.  
+
 * ##[Internal waves - theory.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/currents/Internal waves - theory.ipynb)  
     
     This notebook will look at some internal wave speed theory. I will try to pick out things like the phase speed of the waves in the surface layer and slope of internal wave beams...  
