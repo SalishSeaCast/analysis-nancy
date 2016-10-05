@@ -90,5 +90,5 @@ end
 datastruc.('depth') = depth;
 
 %save
-save(outfile, 'datastruc', '-v7.3')
+save(outfile, 'datastruc')
 
