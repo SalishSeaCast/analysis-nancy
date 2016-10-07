@@ -6,6 +6,8 @@ The links below are to static renderings of the notebooks via
 Descriptions below the links are from the first cell of the notebooks
 (if that cell contains Markdown or raw text).
 
+* ##[Energy flux through sections.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/energy_flux/Energy flux through sections.ipynb)  
+    
 * ##[Barotropic to baroclinic conversion - development.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/energy_flux/Barotropic to baroclinic conversion - development.ipynb)  
     
     Notebook to develop calculations for barotropic to baroclinic conversion.  
@@ -54,6 +56,10 @@ Descriptions below the links are from the first cell of the notebooks
 * ##[Plotting with time dependent depths.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/energy_flux/Plotting with time dependent depths.ipynb)  
     
     This is a notebook to explore how to plot with time dependent depths.  
+
+* ##[Energy Flux Time series.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/energy_flux/Energy Flux Time series.ipynb)  
+    
+    Notebook to experiment with calculating the energy flux time series and then averaging over different tidal periods. Will work with both barotropic and baroclinic energy flux  
 
 
 ##License
