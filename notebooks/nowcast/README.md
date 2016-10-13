@@ -105,6 +105,12 @@ Descriptions below the links are from the first cell of the notebooks
       
     For comparison with nowcast or nowcast-green in September 2016  
 
+* ##[Testing ln_apr_obc=true.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/Testing ln_apr_obc=true.ipynb)  
+    
+    Notebook to determine the effect of ln_apr_obc=true  
+      
+    NEMO says this addes the inverse barometer to open boundary forcing. I don't think we should do that.  
+
 * ##[VENUS.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/VENUS.ipynb)  
     
     Playing with pulling VENUS data.  
