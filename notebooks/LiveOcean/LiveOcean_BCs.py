@@ -17,22 +17,33 @@ import os
 import sys
 import re
 
+from salishsea_tools import gsw_calls
+
 # Special python module provided by Parker MacCready
 import grid
 
 
 # -------Main function to generate boundary files from command line--------
 # Example: python LiveOcean_BCs '2016-08-30'
-def create_files_for_nowcast(date):
+def create_files_for_nowcast(date, teos_10=True):
     """Create boundary files from Live Ocean results for use in nowcast,
     forecast and forecast2.
 
     :arg str date: the LiveOcean rundate in format yyyy-mm-dd
+
+    :arg teos_10: specifies that temperature and salinity are saved in
+                  teos-10 variables if true. If true, temperature is saved as
+                  Conservative Temperature and salinity is Reference Salinity.
+                  If false, temperature is saved as Potential Temperature and
+                  salinity is Practical Salinity
+    :type teos_10: boolean
     """
     save_dir = '/ocean/nsoontie/MEOPAR/LiveOcean/boundary_files/'
     LO_dir = '/ocean/nsoontie/MEOPAR/LiveOcean/subdomain_files/'
 
-    create_LiveOcean_TS_BCs(date, date, '1H', 'daily', time_series=False,
+    create_LiveOcean_TS_BCs(date, date, '1H', 'daily',
+                            time_series=False,
+                            teos_10=teos_10,
                             save_dir=save_dir, LO_dir=LO_dir)
 
 
@@ -206,9 +217,6 @@ def interpolate_to_NEMO_lateral(var_arrays, dataset, NEMOlon, NEMOlat, shape):
     :returns: a dictionary, like var_arrays, but with arrays replaced with
               interpolated values
     """
-    # reshape our NEMO BC grid to use griddata
-    longrid = NEMOlon.reshape(shape)
-    latgrid = NEMOlat.reshape(shape)
     # LiveOcean grid
     lonsLO = dataset.lon_rho.values[0, :]
     latsLO = dataset.lat_rho.values[:, 0]
@@ -256,7 +264,7 @@ def interpolate_to_NEMO_lateral(var_arrays, dataset, NEMOlon, NEMOlat, shape):
 
 
 def create_LiveOcean_TS_BCs(start, end, avg_period, file_frequency,
-                            time_series=True,
+                            time_series=True, teos_10=True,
                             basename='LO',
                             save_dir=('/ocean/nsoontie/MEOPAR/LiveOcean/'
                                       'boundary_files/'),
@@ -294,6 +302,11 @@ def create_LiveOcean_TS_BCs(start, end, avg_period, file_frequency,
                       ignored.
     :type time_series: boolean
 
+    :arg teos_10: specifies that temperature and salinity are saved in
+                  teos-10 variables if true. If false, temperature is Potential
+                  Temperature and Salinity is Practical Salinity
+    :type teos_10: boolean
+
     :arg str basename: the base name of the saved files.
                        Eg. basename='LO', file_frequency='daily' saves files as
                        'LO_yYYYYmMMdDD.nc'
@@ -314,7 +327,7 @@ def create_LiveOcean_TS_BCs(start, end, avg_period, file_frequency,
                 'votemper': {'grid': 'SalishSea2',
                              'long_name': 'Potential Temperature',
                              'units': 'deg C'}
-                }  # We could pass a flag for TEOS-10 and change metadat
+                }
 
     # Mapping from LiveOcean TS names to NEMO TS names
     LO_to_NEMO_var_map = {'salt': 'vosaline',
@@ -342,6 +355,13 @@ def create_LiveOcean_TS_BCs(start, end, avg_period, file_frequency,
     lateral_interps = interpolate_to_NEMO_lateral(depth_interps, LO_dataset,
                                                   lonBC, latBC, shape)
     lateral_interps['ocean_time'] = LO_dataset.ocean_time
+
+    # convert to TEOS-10 if necessary
+    if teos_10:
+        var_meta, lateral_interps['salt'], lateral_interps['temp'] = \
+            _convert_TS_to_TEOS10(var_meta,
+                                  lateral_interps['salt'],
+                                  lateral_interps['temp'])
 
     # divide up data and save into separate files
     _separate_and_save_files(lateral_interps, avg_period, file_frequency,
@@ -608,6 +628,38 @@ def _create_sub_file(date, time_unit, var_arrays, var_meta,
     }
     ds.to_netcdf(filename)
     print('Saved {}'.format(filename))
+
+
+def _convert_TS_to_TEOS10(var_meta, sal, temp):
+    """Convert Practical Salinity and potential temperature to Reference
+       Salinity and Conservative Temperature using gsw matlab functions.
+
+    :arg var_meta: dictionary of metadata for salinity and temperature.
+                   Must have keys vosaline and votemper, each with a sub
+                   dictionary with keys long_name and units
+    :type var_meta: dictionary of dictionaries
+
+    :arg sal: salinity data
+    :type sal: numpy array
+
+    :arg temp: temperature daya
+    :type temp: umpy array
+
+    :returns: updated meta data, salinity and temperature"""
+    # modify metadata
+    new_meta = var_meta.copy()
+    new_meta['vosaline']['long_name'] = 'Reference Salinity'
+    new_meta['vosaline']['units'] = 'g/kg'
+    new_meta['votemper']['long_name'] = 'Conservative Temperature'
+    # Calculate pressure
+    # Convert salinity from practical to reference salinity
+    sal_ref = gsw_calls.generic_gsw_caller('mw_gsw_SR_from_SP.m',
+                                           [sal[:], ])
+    # Conver temperature from potential to consvervative
+    temp_cons = gsw_calls.generic_gsw_caller('mw_gsw_CT_from_pt.m',
+                                             [sal_ref[:], temp[:], ])
+    return new_meta, sal_ref, temp_cons
+
 
 if __name__ == '__main__':
     create_files_for_nowcast(sys.argv[1])
