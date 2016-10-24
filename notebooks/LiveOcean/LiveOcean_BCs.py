@@ -651,12 +651,11 @@ def _convert_TS_to_TEOS10(var_meta, sal, temp):
     new_meta['vosaline']['long_name'] = 'Reference Salinity'
     new_meta['vosaline']['units'] = 'g/kg'
     new_meta['votemper']['long_name'] = 'Conservative Temperature'
-    # Calculate pressure
     # Convert salinity from practical to reference salinity
-    sal_ref = gsw_calls.generic_gsw_caller('mw_gsw_SR_from_SP.m',
+    sal_ref = gsw_calls.generic_gsw_caller('gsw_SR_from_SP.m',
                                            [sal[:], ])
     # Conver temperature from potential to consvervative
-    temp_cons = gsw_calls.generic_gsw_caller('mw_gsw_CT_from_pt.m',
+    temp_cons = gsw_calls.generic_gsw_caller('gsw_CT_from_pt.m',
                                              [sal_ref[:], temp[:], ])
     return new_meta, sal_ref, temp_cons
 
