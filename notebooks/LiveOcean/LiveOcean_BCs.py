@@ -39,7 +39,7 @@ def create_files_for_nowcast(date, teos_10=True):
     :type teos_10: boolean
     """
     save_dir = '/ocean/nsoontie/MEOPAR/LiveOcean/boundary_files/'
-    LO_dir = '/ocean/nsoontie/MEOPAR/LiveOcean/subdomain_files/'
+    LO_dir = '/results/forcing/LiveOcean/downloaded/'
 
     create_LiveOcean_TS_BCs(date, date, '1H', 'daily',
                             time_series=False,
@@ -268,8 +268,7 @@ def create_LiveOcean_TS_BCs(start, end, avg_period, file_frequency,
                             basename='LO',
                             save_dir=('/ocean/nsoontie/MEOPAR/LiveOcean/'
                                       'boundary_files/'),
-                            LO_dir=('/ocean/nsoontie/MEOPAR/LiveOcean/'
-                                    'subdomain_files'),
+                            LO_dir=('/results/forcing/LiveOcean/downloaded/'),
                             NEMO_BC=('/data/nsoontie/MEOPAR/NEMO-forcing/'
                                      'open_boundaries/west/'
                                      'SalishSea2_Masson_corrected.nc')
