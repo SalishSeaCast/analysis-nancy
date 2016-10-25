@@ -2,7 +2,7 @@
 # Download's all files for the specified run day (72 hours).
 # Uses wget to download files and also UBC_subdomain.py to extract subdomain
 # Original Live Ocean files (100mb each) are deleted
-# Example usage: bash download_runday.sh 2016-06-09 DEST
+# Example usage: bash download_day.sh 2016-06-09 DEST
 # downloads 72 hours for a Live Ocean run that began on June 9, 2016. Places the
 # files in a directory DEST/20160609/
 
