@@ -345,7 +345,7 @@ def create_LiveOcean_TS_BCs(start, end, avg_period, file_frequency,
     else:
         print('Preparing 72 hours of Live Ocean results.'
               'Argument end = {} is ignored'.format(end))
-        files = _list_LO_rundate_files(start, LO_dir)
+        files = _list_LO_files_for_nowcast(start, LO_dir)
         save_dir = os.path.join(save_dir, start)
         if not os.path.isdir(save_dir):
             os.mkdir(save_dir)
@@ -411,15 +411,18 @@ def _list_LO_time_series_files(start, end, LO_dir):
     return keeps
 
 
-def _list_LO_rundate_files(rundate, LO_dir):
-    """ List 72 hours of Live Ocean files from a rundate.
+def _list_LO_files_for_nowcast(rundate, LO_dir):
+    """ List 48 hours of Live Ocean files that began on rundate.
+    Used for creation of nowcast system boundary conditions.
+    Each Live Ocean run date contains 72 hours. This funtcion returns the files
+    that represent hours 23 through 71.
     Example: if rundate='2016-06-01'  the listed files will be
-    LO_dir/2016-05-31/ocean_his_0024_UBC.nc to
-    LO_dir/2016-06-01/ocean_his_0072_UBC.nc
-    The times in these files represent 2016-06-01 00:00:00 to
+    LO_dir/20160601/ocean_his_0025_UBC.nc to
+    LO_dir/20160601/ocean_his_0072_UBC.nc
+    The times in these files represent 2016-06-02 00:00:00 to
     2016-06-03 23:00:00.
 
-    :arg str rundate: rundate in format 'yyyy-mm-dd'
+    :arg str rundate: The Live Ocean rundate in format 'yyyy-mm-dd'
 
     :arg str LO_dir: the file path where Live Ocean results are stored
 
@@ -427,14 +430,18 @@ def _list_LO_rundate_files(rundate, LO_dir):
     """
 
     sdt = datetime.datetime.strptime(rundate, '%Y-%m-%d')
-    files = glob.glob(os.path.join(LO_dir, sdt.strftime('%Y%m%d'), '*.nc'))
-    sdt_m1 = sdt - datetime.timedelta(days=1)
-    files.insert(0, os.path.join(LO_dir, sdt_m1.strftime('%Y%m%d'),
-                 'ocean_his_0025_UBC.nc'))
-    files.sort()
-    del files[-1]
+    allfiles = glob.glob(os.path.join(LO_dir, sdt.strftime('%Y%m%d'), '*.nc'))
+    start_str = 'ocean_his_0025_UBC.nc'
+    end_str = 'ocean_his_0072_UBC.nc'
+    files_return = []
+    for filename in allfiles:
+        if os.path.basename(filename) >= start_str:
+            if os.path.basename(filename) <= end_str:
+                files_return.append(filename)
 
-    return files
+    files_return.sort(key=os.path.basename)
+
+    return files_return
 
 
 def _separate_and_save_files(interpolated_data, avg_period, file_frequency,
