@@ -38,13 +38,13 @@ def create_files_for_nowcast(date, teos_10=True):
                   salinity is Practical Salinity
     :type teos_10: boolean
     """
-    save_dir = '/ocean/nsoontie/MEOPAR/LiveOcean/boundary_files/'
+    save_dir = '/results/forcing/LiveOcean/boundary_conditions/'
     LO_dir = '/results/forcing/LiveOcean/downloaded/'
 
     create_LiveOcean_TS_BCs(date, date, '1H', 'daily',
-                            time_series=False,
+                            nowcast=True,
                             teos_10=teos_10,
-                            save_dir=save_dir, LO_dir=LO_dir)
+                            bc_dir=save_dir, LO_dir=LO_dir)
 
 
 # ---------------------- Interpolation functions ------------------------
@@ -264,10 +264,10 @@ def interpolate_to_NEMO_lateral(var_arrays, dataset, NEMOlon, NEMOlat, shape):
 
 
 def create_LiveOcean_TS_BCs(start, end, avg_period, file_frequency,
-                            time_series=True, teos_10=True,
+                            nowcast=False, teos_10=True,
                             basename='LO',
-                            save_dir=('/ocean/nsoontie/MEOPAR/LiveOcean/'
-                                      'boundary_files/'),
+                            bc_dir=('/ocean/nsoontie/MEOPAR/LiveOcean/'
+                                    'boundary_files/'),
                             LO_dir=('/results/forcing/LiveOcean/downloaded/'),
                             NEMO_BC=('/data/nsoontie/MEOPAR/NEMO-forcing/'
                                      'open_boundaries/west/'
@@ -294,12 +294,12 @@ def create_LiveOcean_TS_BCs(start, end, avg_period, file_frequency,
                                look like *_yYYYYmMMdDD.nc
                              where * is the basename.
 
-    :arg time_series: Specifies that the boundary data is derived from
-                      time series of LiveOcean nowcast results.
-                      If false, the files are from a single 72 hour run
-                      beginning on start, in which case, the argument end is
-                      ignored.
-    :type time_series: boolean
+    :arg nowcast: Specifies that the boundary data is to be generated for the
+                  nowcast framework. If true, the files are from a single
+                  72 hour run beginning on start, in which case, the argument
+                  end is ignored. If false, a set of time series files
+                  is produced.
+    :type nowcast: boolean
 
     :arg teos_10: specifies that temperature and salinity are saved in
                   teos-10 variables if true. If false, temperature is Potential
@@ -310,9 +310,7 @@ def create_LiveOcean_TS_BCs(start, end, avg_period, file_frequency,
                        Eg. basename='LO', file_frequency='daily' saves files as
                        'LO_yYYYYmMMdDD.nc'
 
-    :arg str save_dir: the directory in which to save the results. If a time
-                       series is not requested, resutls are saved in
-                       save_dir/subdir, where subdir is yyyy-mm-dd
+    :arg str bc_dir: the directory in which to save the results.
 
     :arg str LO_dir: the directory in which Live Ocean results are stored.
 
@@ -339,13 +337,14 @@ def create_LiveOcean_TS_BCs(start, end, avg_period, file_frequency,
     depBC, lonBC, latBC, shape = load_SalishSea_boundary_grid(fname=NEMO_BC)
 
     # Load and interpolate Live Ocean
-    if time_series:
+    if not nowcast:
         files = _list_LO_time_series_files(start, end, LO_dir)
+        save_dir = bc_dir
     else:
         print('Preparing 72 hours of Live Ocean results.'
               'Argument end = {} is ignored'.format(end))
         files = _list_LO_files_for_nowcast(start, LO_dir)
-        save_dir = os.path.join(save_dir, start)
+        save_dir = os.path.join(bc_dir, start)
         if not os.path.isdir(save_dir):
             os.mkdir(save_dir)
     LO_dataset = load_LiveOcean(files, resample_interval=avg_period)
@@ -366,6 +365,42 @@ def create_LiveOcean_TS_BCs(start, end, avg_period, file_frequency,
     _separate_and_save_files(lateral_interps, avg_period, file_frequency,
                              basename, save_dir, LO_to_NEMO_var_map, var_meta,
                              NEMO_var_arrays, NEMO_BC)
+    # move files around
+    if nowcast:
+        _relocate_files_for_nowcast(start, save_dir, basename, bc_dir)
+
+
+def _relocate_files_for_nowcast(start_date, save_dir, basename, bc_dir):
+    """Organize the files for use in the nowcast framework.
+    Orginally, files are save in bc_dir/start/basename_y...nc
+    For the nowcast system we want file start_date+1 in bc_dir and
+    start_date+2 in bc_dir/fcst
+
+    :arg str start_date: the start_date of the LO simulation in format %Y-%m-%d
+
+    :arg str save_dir: the directory where the boundary files are orginally
+    saved. Should be bc_dir/start_date/..
+
+    :arg str basename: The basename of the boundary files,  e.g. LO
+
+    :arg str bc_dir: The directory to save the bc files.
+
+    """
+    rundate = datetime.datetime.strptime(start_date, '%Y-%m-%d')
+    for d, subdir in zip([1, 2], ['', 'fcst']):
+        next_date = rundate + datetime.timedelta(days=d)
+        d_file = os.path.join(
+            save_dir, '{}_{}.nc'.format(basename,
+                                        next_date.strftime('y%Ym%md%d')
+                                        )
+            )
+        if os.path.isfile(d_file):
+            os.rename(d_file,
+                      os.path.join(bc_dir,
+                                   subdir,
+                                   os.path.basename(d_file)))
+    if not os.listdir(save_dir):
+        os.rmdir(save_dir)
 
 
 def _list_LO_time_series_files(start, end, LO_dir):
