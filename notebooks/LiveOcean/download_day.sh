@@ -21,3 +21,7 @@ for f in $(seq -f %04g 2 73); do
    python UBC_subdomain.py $fname_save
    rm -f $fname_save
 done
+# compression
+for f in $DEST/$subdir/*.nc; do
+    ncks -4 -L4 -O $f $f
+done
