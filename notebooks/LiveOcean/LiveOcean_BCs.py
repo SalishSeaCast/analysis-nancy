@@ -16,6 +16,7 @@ import glob
 import os
 import sys
 import re
+import subprocess as sp
 
 from salishsea_tools import gsw_calls
 
@@ -365,6 +366,13 @@ def create_LiveOcean_TS_BCs(start, end, avg_period, file_frequency,
     _separate_and_save_files(lateral_interps, avg_period, file_frequency,
                              basename, save_dir, LO_to_NEMO_var_map, var_meta,
                              NEMO_var_arrays, NEMO_BC)
+    # make time_counter the record dimension using ncks and compress
+    files = glob.glob(os.path.join(save_dir, '*.nc'))
+    for f in files:
+        cmd = ['ncks', '--mk_rec_dmn=time_counter', '-O', f, f]
+        sp.call(cmd)
+        cmd = ['ncks', '-4', '-L4', '-O', f, f]
+        sp.call(cmd)
     # move files around
     if nowcast:
         _relocate_files_for_nowcast(start, save_dir, basename, bc_dir)
