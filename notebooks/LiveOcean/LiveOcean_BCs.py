@@ -51,7 +51,7 @@ def create_files_for_nowcast(date, teos_10=True):
 # ---------------------- Interpolation functions ------------------------
 def load_SalishSea_boundary_grid(
     fname=('/data/nsoontie/MEOPAR/NEMO-forcing/open_boundaries/west/'
-           'SalishSea2_Masson_corrected.nc')
+           'SalishSea_west_TEOS10.nc'),
 ):
     """Load the Salish Sea NEMO model boundary depth, latitudes and longitudes.
 
@@ -64,11 +64,7 @@ def load_SalishSea_boundary_grid(
     depth = f.variables['deptht'][:]
     lon = f.variables['nav_lon'][:]
     lat = f.variables['nav_lat'][:]
-    # determine lateral shape of boundary because arrays are flattened
-    width = f.variables['nbrdta'][:].flatten()[-1] + 1
-    length = int(f.variables['nbrdta'][:].shape[-1]/width)
-    # Should I through an error if this division is not an int?
-    shape = (width, length)
+    shape = lon.shape
 
     return depth, lon, lat, shape
 
@@ -224,7 +220,7 @@ def interpolate_to_NEMO_lateral(var_arrays, dataset, NEMOlon, NEMOlat, shape):
     # interpolate each variable
     interps = {}
     for var_name, var in var_arrays.items():
-        var_new = np.zeros((var.shape[0], var.shape[1], 1, shape[0]*shape[1]))
+        var_new = np.zeros((var.shape[0], var.shape[1], shape[0], shape[1]))
         mask = var_new.copy()
         interp_nearest = var_new.copy()
         for t in np.arange(var_new.shape[0]):
@@ -238,17 +234,17 @@ def interpolate_to_NEMO_lateral(var_arrays, dataset, NEMOlon, NEMOlat, shape):
                                             NEMOlon,
                                             NEMOlat)
                 # Keep track of mask
-                mask[t, k, 0, :] = var_interp.mask
+                mask[t, k, ...] = var_interp.mask
                 # Next, interpolate using nearest neighbour so that masked
                 # areas can be filled later.
-                interp_nearest[t, k, 0, :] = Basemap.interp(var_grid,
-                                                            lonsLO,
-                                                            latsLO,
-                                                            NEMOlon,
-                                                            NEMOlat,
-                                                            order=0)
+                interp_nearest[t, k, ...] = Basemap.interp(var_grid,
+                                                           lonsLO,
+                                                           latsLO,
+                                                           NEMOlon,
+                                                           NEMOlat,
+                                                           order=0)
                 # ave bilinear intepr in var_new
-                var_new[t, k, 0, :] = var_interp
+                var_new[t, k, ...] = var_interp
         # Fill in masked values with nearest neighbour interpolant
         inds_of_mask = np.where(mask == 1)
         var_new[inds_of_mask] = interp_nearest[inds_of_mask]
@@ -267,12 +263,12 @@ def interpolate_to_NEMO_lateral(var_arrays, dataset, NEMOlon, NEMOlat, shape):
 def create_LiveOcean_TS_BCs(start, end, avg_period, file_frequency,
                             nowcast=False, teos_10=True,
                             basename='LO',
-                            bc_dir=('/ocean/nsoontie/MEOPAR/LiveOcean/'
-                                    'boundary_files/'),
+                            bc_dir=('/results/forcing/LiveOcean/'
+                                    'boundary_condtions/'),
                             LO_dir=('/results/forcing/LiveOcean/downloaded/'),
                             NEMO_BC=('/data/nsoontie/MEOPAR/NEMO-forcing/'
                                      'open_boundaries/west/'
-                                     'SalishSea2_Masson_corrected.nc')
+                                     'SalishSea_west_TEOS10.nc')
                             ):
     """Create a series of Live Ocean boundary condition files in date range
     [start, end] for use in the NEMO model.
@@ -632,8 +628,8 @@ def _create_sub_file(date, time_unit, var_arrays, var_meta,
                                   )
         ds = xr.merge([ds, temp_array])
     # Add better units information nbidta etc
-    for varname in ['nbidta', 'nbjdta', 'nbrdta']:
-        ds[varname].attrs['units'] = 'index'
+    # for varname in ['nbidta', 'nbjdta', 'nbrdta']:
+    #    ds[varname].attrs['units'] = 'index'
     # Now add the time-dependent model variables
     for var_name, var_array in var_arrays.items():
         data_array = xr.DataArray(var_array,
