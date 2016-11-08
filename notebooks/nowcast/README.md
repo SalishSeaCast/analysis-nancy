@@ -54,6 +54,19 @@ Descriptions below the links are from the first cell of the notebooks
       
     For comparison with nowcast or forecast.  
 
+* ##[DDL_in_October.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/DDL_in_October.ipynb)  
+    
+    Looking at the August 2016 renewal in nowcast-green, nowcast and obs  
+
+* ##[Sept-nowcast-green-new tidal predictions.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/Sept-nowcast-green-new tidal predictions.ipynb)  
+    
+    I donwloaded recent water level observations from this website.  
+    http://www.pac.dfo-mpo.gc.ca/science/charts-cartes/obs-app/observed-eng.aspx?StationID=07795  
+      
+    For comparison with nowcast or nowcast-green in September 2016  
+      
+    Tide predictions were calculated with nodal factors updated daily  
+
 * ##[Rosario Strait.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/Rosario Strait.ipynb)  
     
     Quick check of mean volume flux throuhg a transect in Rosario Strait   
@@ -128,6 +141,15 @@ Descriptions below the links are from the first cell of the notebooks
 * ##[HYCOM.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/HYCOM.ipynb)  
     
     Practice reading in HYCOM model data.  
+
+* ##[Sept-nowcast-green-new tidal predictions-Victoria.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/Sept-nowcast-green-new tidal predictions-Victoria.ipynb)  
+    
+    I donwloaded recent water level observations from this website.  
+    http://www.pac.dfo-mpo.gc.ca/science/charts-cartes/obs-app/observed-eng.aspx?StationID=07795  
+      
+    For comparison with nowcast or nowcast-green in September 2016  
+      
+    Tide predictions were calculated with nodal factors updated daily  
 
 * ##[Model Mean Sea Level - nowcasts.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/Model Mean Sea Level - nowcasts.ipynb)  
     
