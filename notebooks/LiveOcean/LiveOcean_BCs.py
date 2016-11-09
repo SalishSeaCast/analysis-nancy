@@ -85,16 +85,9 @@ def load_LiveOcean(files, resample_interval='1H'):
     # Loop through files and load
     d = xr.open_dataset(files[0])
     for f in files[1:]:
-        dvars = d.data_vars
         with xr.open_dataset(f) as d1:
             # drop uncommon variables - subfunction?
-            d1vars = d1.data_vars
-            diff = set(dvars) ^ set(d1vars)
-            rm_d1 = set(d1vars) & diff
-            d1 = d1.drop(list(rm_d1))
-            rmd = set(dvars) & diff
-            d = d.drop(list(rmd))
-            # concatenate
+            d, d1 = _remove_uncommon_variables_or_coords(d, d1)
             d = xr.concat([d, d1], dim='ocean_time', data_vars='minimal')
     # Determine z-rho (depth)
     G, S, T = grid.get_basic_info(files[0])  # note: grid.py is from Parker
@@ -118,6 +111,32 @@ def load_LiveOcean(files, resample_interval='1H'):
     d = d.resample(resample_interval, 'ocean_time')
 
     return d
+
+
+def _remove_uncommon_variables_or_coords(d, d1, remove_type='variables'):
+    """Removes uncommon variables or coordinates between two xarray datasets
+
+    :arg d: First dataset
+    :type d: xarray dataset
+
+    :arg d1: Second dataset
+    :type d1: xarray dataset
+
+    :arg str remove_type: the type to be removed. Either 'variables'
+                          or 'coordinates'.
+
+    :returns: two new datasets with uncommon variables/coordinates removed
+    """
+    if remove_type == 'variables':
+        d1list = d1.data_vars
+        dlist = d.data_vars
+    elif remove_type == 'coords':
+        d1list = d1.coords
+        dlist = d.coords
+    diff = set(dlist) ^ set(d1list)
+    rm_d1 = set(d1list) & diff
+    rm_d = set(dlist) & diff
+    return d.drop(list(rm_d)), d1.drop(list(rm_d1))
 
 
 def interpolate_to_NEMO_depths(dataset, NEMO_depths, var_names):
