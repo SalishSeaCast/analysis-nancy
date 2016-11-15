@@ -8,6 +8,7 @@
 
 DEST=$2
 SOURCE=https://pm2.blob.core.windows.net/f
+TOOLS_PATH=/data/nsoontie/MEOPAR/tools/SalishSeaTools/salishsea_tools
 
 d=$(date -I -d "$1") || exit -1
 
@@ -18,7 +19,7 @@ for f in $(seq -f %04g 2 73); do
    fname=$SOURCE$subdir/ocean_his_$f.nc
    fname_save=$DEST/$subdir/ocean_his_$f.nc
    wget -O $fname_save $fname
-   python UBC_subdomain.py $fname_save
+   python $TOOLS_PATH/UBC_subdomain.py $fname_save
    rm -f $fname_save
 done
 # compression
