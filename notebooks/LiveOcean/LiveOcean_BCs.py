@@ -21,7 +21,7 @@ import subprocess as sp
 from salishsea_tools import gsw_calls
 
 # Special python module provided by Parker MacCready
-import grid
+from salishsea_tools import LiveOcean_grid as grid
 
 
 # -------Main function to generate boundary files from command line--------
