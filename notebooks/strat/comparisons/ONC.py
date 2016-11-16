@@ -9,7 +9,7 @@ import netCDF4 as nc
 from scipy import interpolate as interp
 
 
-from salishsea_tools import tidetools, viz_tools, geo_tools
+from salishsea_tools import tidetools, viz_tools, geo_tools, teos_tools
 from nowcast import analyze
 
 
@@ -251,7 +251,8 @@ def model_vertical_postion(sal, temp, mdepths, depth, interp):
 
 
 def compare_ONC_model(csvfilename, sdt, edt, grid_B, results_home, period='1h',
-                      interp=False, smin=30, smax=35, tmin=8, tmax=12):
+                      interp=False, smin=30, smax=35, tmin=8, tmax=12,
+                      teos_to_psu=False):
     """Comparison between ONC mooring data in a date range and model results.
 
     :arg csvfilename: The file with the ONC data
@@ -285,6 +286,10 @@ def compare_ONC_model(csvfilename, sdt, edt, grid_B, results_home, period='1h',
     :arg tmax: maximum salinity for axis
     :type tmax: float
 
+    :arg teos_to_psu: flag to convert model TEOS-10 'reference' salinity
+                      practical salinity
+    :type teos_to_psu: boolean
+
     :returns: figmap, fig - figure objects for the map and comaprisons plots
     """
 
@@ -300,6 +305,8 @@ def compare_ONC_model(csvfilename, sdt, edt, grid_B, results_home, period='1h',
                                            period, 'votemper', lat, lon)
     # Align model vertically
     sal, temp, text = model_vertical_postion(sal, temp, mdepths, depth, interp)
+    if teos_to_psu:
+        sal = teos_tools.teos_psu(sal)
 
     # Plotting
     fig, axs = plt.subplots(2, 1, figsize=(10, 7))
