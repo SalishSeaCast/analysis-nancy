@@ -9,7 +9,7 @@ import netCDF4 as nc
 from scipy import interpolate as interp
 
 
-from salishsea_tools import tidetools, viz_tools
+from salishsea_tools import tidetools, viz_tools, geo_tools
 from nowcast import analyze
 
 
@@ -89,7 +89,7 @@ def isolate_dates(data, sdt, edt):
     return data[(data['time'] >= sdt) & (data['time'] <= edt)]
 
 
-def isolate_qc_data(data, qc_flag):
+def isolate_qc_data(data, qc_flag, good_flags=[0, 1]):
     """Return the data with QC flag 1 for the specified variable
 
     :arg data: the data
@@ -99,9 +99,9 @@ def isolate_qc_data(data, qc_flag):
     eg. 'Practical Salinity QC Flag  '
     :type qc_flag: string
 
-    :returns: data_qc - the data subsetted with qc_flag=1
+    :returns: data_qc - the data subsetted with qc_flag
     """
-    data_qc = data[data[qc_flag] == 1]
+    data_qc = data[data[qc_flag].isin(good_flags)]
 
     return data_qc
 
@@ -175,7 +175,7 @@ def load_model_data(sdt, edt, grid_B, results_home, period,
     Y = grid_B.variables['nav_lat'][:]
     bathy = grid_B.variables['Bathymetry'][:]
     # Look up grid coordinates
-    j, i = tidetools.find_closest_model_point(lon, lat, X, Y, bathy)
+    j, i = geo_tools.find_closest_model_point(lon, lat, X, Y)
     # Grab model data
     var, times = analyze.combine_files(files, variable,
                                        np.arange(mdepths.shape[0]), j, i)
