@@ -4,7 +4,7 @@
 
 import pandas as pd
 from nowcast import analyze
-from salishsea_tools import tidetools, viz_tools
+from salishsea_tools import viz_tools, geo_tools
 import matplotlib.pyplot as plt
 import numpy as np
 from dateutil import tz
@@ -20,7 +20,7 @@ LIGHTHOUSES = {'Race Rocks':
                'http://www.pac.dfo-mpo.gc.ca/science/oceans/data-donnees/lighthouses-phares/data/departurday.txt'}
 
 MODEL_PATHS = {'nowcast': '/results/SalishSea/nowcast/',
-               'spinup': '/results/SalishSea/spin-up/'
+               'spinup': '/results/SalishSea/spin-up/',
                }
 
 
@@ -140,8 +140,7 @@ def compare_model(to, tf, lighthouse,  mode, period,
     # Look up modle grid point
     X = grid_B.variables['nav_lon'][:]
     Y = grid_B.variables['nav_lat'][:]
-    bathy = grid_B.variables['Bathymetry'][:]
-    j, i = tidetools.find_closest_model_point(lon, lat, X, Y, bathy)
+    j, i = geo_tools.find_closest_model_point(lon, lat, X, Y)
 
     # load model
     files = analyze.get_filenames(to, tf, period, 'grid_T', MODEL_PATHS[mode])
