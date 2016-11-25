@@ -147,7 +147,7 @@ def compare_model(to, tf, lighthouse,  mode, period,
     files = analyze.get_filenames(to, tf, period, 'grid_T', MODEL_PATHS[mode])
     sal, time = analyze.combine_files(files, 'vosaline', 0, j, i)
     if mode == 'nowcast-green':
-       sal = teos_tools.teos_psu(sal)
+        sal = teos_tools.teos_psu(sal)
     temp, time = analyze.combine_files(files, 'votemper', 0, j, i)
     if period == '1h':
         # look up times of high tides
