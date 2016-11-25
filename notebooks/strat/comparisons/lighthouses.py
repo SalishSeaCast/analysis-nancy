@@ -4,7 +4,7 @@
 
 import pandas as pd
 from nowcast import analyze
-from salishsea_tools import viz_tools, geo_tools
+from salishsea_tools import viz_tools, geo_tools, teos_tools
 import matplotlib.pyplot as plt
 import numpy as np
 from dateutil import tz
@@ -21,6 +21,7 @@ LIGHTHOUSES = {'Race Rocks':
 
 MODEL_PATHS = {'nowcast': '/results/SalishSea/nowcast/',
                'spinup': '/results/SalishSea/spin-up/',
+               'nowcast-green': '/results/SalishSea/nowcast-green/'
                }
 
 
@@ -112,7 +113,7 @@ def compare_model(to, tf, lighthouse,  mode, period,
     :arg lighthouse: the name of the lighthouse
     :type lighthouse: string
 
-    :arg mode: the model simulation mode - nowcast or spinup
+    :arg mode: the model simulation mode - nowcast or spinup or nowcast-green
     :type mode: string
 
     :arg period: the averaging period for model results - 1h or 1d
@@ -145,6 +146,8 @@ def compare_model(to, tf, lighthouse,  mode, period,
     # load model
     files = analyze.get_filenames(to, tf, period, 'grid_T', MODEL_PATHS[mode])
     sal, time = analyze.combine_files(files, 'vosaline', 0, j, i)
+    if mode == 'nowcast-green':
+       sal = teos_tools.teos_psu(sal)
     temp, time = analyze.combine_files(files, 'votemper', 0, j, i)
     if period == '1h':
         # look up times of high tides
