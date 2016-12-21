@@ -12,6 +12,10 @@ Descriptions below the links are from the first cell of the notebooks
       
     Data is from PSF/ONC.  
 
+* ##[Comparison-special.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/mixing/Comparison-special.ipynb)  
+    
+    Notebook to compare stratification between two simulations.  
+
 * ##[Comparison.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/mixing/Comparison.ipynb)  
     
     Notebook to compare stratification between two simulations.  
