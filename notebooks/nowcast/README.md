@@ -58,6 +58,13 @@ Descriptions below the links are from the first cell of the notebooks
     
     Looking at the August 2016 renewal in nowcast-green, nowcast and obs  
 
+* ##[November 2016 residuals.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/November 2016 residuals.ipynb)  
+    
+    I donwloaded recent water level observations from this website.  
+    http://www.pac.dfo-mpo.gc.ca/science/charts-cartes/obs-app/observed-eng.aspx?StationID=07795  
+      
+    For comparison with nowcast or forecast.  
+
 * ##[Sept-nowcast-green-new tidal predictions.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/Sept-nowcast-green-new tidal predictions.ipynb)  
     
     I donwloaded recent water level observations from this website.  
@@ -162,7 +169,7 @@ Descriptions below the links are from the first cell of the notebooks
 
 ##License
 
-These notebooks and files are copyright 2013-2016
+These notebooks and files are copyright 2013-2017
 by the Salish Sea MEOPAR Project Contributors
 and The University of British Columbia.
 
