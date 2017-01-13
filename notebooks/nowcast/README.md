@@ -43,6 +43,10 @@ Descriptions below the links are from the first cell of the notebooks
     
     Notebook to compare HYCOM and NOAA  
 
+* ##[Central in 2016.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/Central in 2016.ipynb)  
+    
+    Looking at the 2016 renewal in nowcast-green, nowcast and obs  
+
 * ##[Detirmining Indices for subsetting HYCOM data.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/nowcast/Detirmining Indices for subsetting HYCOM data.ipynb)  
     
     This notebook will look up indices for subsetting the HYCOM netcdf files  
