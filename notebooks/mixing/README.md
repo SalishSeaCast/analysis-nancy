@@ -12,6 +12,8 @@ Descriptions below the links are from the first cell of the notebooks
       
     Data is from PSF/ONC.  
 
+* ##[Spinups - mixing paper.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/mixing/Spinups - mixing paper.ipynb)  
+    
 * ##[Comparison-special.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-nancy/raw/tip/notebooks/mixing/Comparison-special.ipynb)  
     
     Notebook to compare stratification between two simulations.  
@@ -23,7 +25,7 @@ Descriptions below the links are from the first cell of the notebooks
 
 ##License
 
-These notebooks and files are copyright 2013-2016
+These notebooks and files are copyright 2013-2017
 by the Salish Sea MEOPAR Project Contributors
 and The University of British Columbia.
 
